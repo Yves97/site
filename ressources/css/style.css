@@ -1,4 +1,12 @@
 /************->VARIABLES*********<-*/
+
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+    --color-green: #57d131;
+    --default-transition: all .3s;
+}
+
 /*------------------------------------*/
 
 
@@ -15,10 +23,120 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
     box-sizing: border-box;
     font-size: 1.6rem;
 }
+
+a,a:hover{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/*------------------------------------*/
+
+/************->ONE PAGE INDEX *********<-*/
+
+.header{
+    height: 100vh;
+    position: relative;
+}
+
+.navbar{
+    background: transparent;
+    padding: 1rem;
+}
+
+.navbar-brand{
+    color: var(--color-white) !important;
+    font-size: 2rem;
+}
+
+#my-nav{
+    justify-content: center!important;
+}
+
+.navbar-nav{
+    justify-content: center;
+}
+
+.nav-item{
+    margin-right: 2rem;
+    font-size: 1.8rem;
+}
+
+.nav-link{
+    color: var(--color-white);
+    transition: var(--default-transition);
+}
+
+.nav-link:hover{
+    color: var(--color-green);
+}
+
+.banner-info{
+    position: absolute;
+    width: 40rem;
+    background: rgba(0, 0, 0, 0.308);
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-30%);
+    padding: 1rem;
+    border-left: 2px solid var(--color-green);
+    color: var(--color-white);
+}
+
+.banner-info h3{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+#scroll-invitation a span {
+position: absolute;
+bottom: 4rem;
+left: 50%;
+width: 2.4rem;
+height: 2.4rem;
+border-left: 3px solid var(--color-green);
+border-bottom: 3px solid var(--color-green);
+-webkit-transform: rotateZ(-45deg);
+transform: rotateZ(-45deg),translate(-50%,-4rem);
+-webkit-animation: yv-effect 1.5s infinite;
+animation: yv-effect 1.5s infinite;
+}
+
+@-webkit-keyframes yv-effect {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+@keyframes yv-effect {
+    0% {
+        transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+
+
+
 /*------------------------------------*/
