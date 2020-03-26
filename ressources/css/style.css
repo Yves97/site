@@ -1,6 +1,7 @@
 /************->VARIABLES*********<-*/
 
 :root{
+    --dark-theme-color:rgb(0, 0, 0);
     --color-white: #fff;
     --color-black: #000;
     --color-blue:#0b2239;
@@ -209,7 +210,7 @@ a,a:hover{
 
 #about, #skills, #education, #contacts, #portfolio{
     padding: 5rem 0;
-    background-color: var(--color-white);
+    background-color:var(--dark-theme-color) ;
 }
 
 .box-content-info{
@@ -220,7 +221,7 @@ a,a:hover{
     font-size: 5rem;
     position: relative;
     cursor: default;
-    color: var(--color-blue);
+    color: var(--white-gradient);
     margin-bottom: 10rem;
     z-index: 3;
 }
@@ -251,6 +252,7 @@ a,a:hover{
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    color: var(--color-white);
 }
 
 .info-text h3{
@@ -277,8 +279,8 @@ a,a:hover{
     border: none;
     margin-top: 2rem;
     cursor: pointer;
-    background: var(--color-white);
-    color: var(--color-blue);
+    background: transparent;
+    color: var(--white-gradient);
     transition: var(--default-transition);
 }
 
@@ -296,14 +298,14 @@ a,a:hover{
 
 .btn-download:hover::after{
     width: 100%;
-    background: var(--color-white);
+    background: transparent;
     border-top: 1px solid var(--color-green);
     border-bottom: 1px solid var(--color-green);
     border-right: 1px solid var(--color-green);
 }
 
 .btn-download:hover{
-    color: var(--color-blue);
+    color: var(--white-gradient);
 }
 
 .skills{
@@ -312,6 +314,7 @@ a,a:hover{
 
 .skills p{
     margin-bottom: 0;
+    color: var(--white-gradient);
 }
 
 .skills progress[value]{
@@ -486,7 +489,9 @@ top: calc(50% - 3px);
 }
 
 .y-input , .t-input{
+    color: var(--white-gradient);
     display: block;
+    background: transparent;
     margin-bottom: 2rem;
     width: 100%;
     margin: 2rem auto;
@@ -496,6 +501,11 @@ top: calc(50% - 3px);
     outline: none;
     transition: var(--default-transition);
 }
+
+.y-input::placeholder, .t-input::placeholder{
+    color: var(--white-gradient);
+}
+
 
 .y-input:focus{
     border-bottom: 1px solid var(--color-green);
