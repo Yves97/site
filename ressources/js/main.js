@@ -1,6 +1,6 @@
 //***********isotope js
 var $portfolioItem = $('.portfolio-item');
-console.log($portfolioItem)
+// console.log($portfolioItem)
 
 $portfolioItem.isotope({
     itemSelector: '.item',
