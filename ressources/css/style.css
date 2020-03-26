@@ -142,8 +142,9 @@ animation: yv-effect 1.5s infinite;
     }
 }
 
-#about, #skills, #education, #contacts{
+#about, #skills, #education, #contacts, #portfolio{
     padding: 5rem 0;
+    background-color: var(--color-white);
 }
 
 .box-content-info{
@@ -441,6 +442,10 @@ top: calc(50% - 3px);
 }
 
 #footer{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index:-1;
     background: var(--color-blue);
     padding: 2rem 0;
     text-align: center;
