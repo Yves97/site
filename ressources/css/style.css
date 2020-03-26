@@ -5,6 +5,9 @@
     --color-black: #000;
     --color-green: #57d131;
     --default-transition: all .3s;
+    --color-gray: #5e5d5d;
+    --white-fade:#e7e7e7;
+    --white-gradient:#f9f8f3;
 }
 
 /*------------------------------------*/
@@ -136,7 +139,94 @@ animation: yv-effect 1.5s infinite;
     }
 }
 
+#about{
+    padding: 5rem;
+}
 
+.box-content-info{
+    padding: 1rem;
+}
 
+.box-content-info > h3{
+    font-size: 5rem;
+    position: relative;
+    cursor: default;
+    color: var(--color-gray);
+    margin-bottom: 3rem;
+}
 
+.box-content-info > h3::before{
+    content:" ";
+    position: absolute;
+    bottom: -.4rem;
+    width: 10rem;
+    height: 2rem;
+    z-index: -1;
+    background: var(--color-green) !important;
+    transition: var(--default-transition);
+}
+
+.box-content-info > h3:hover::before{
+    width: 20rem;
+}
+
+.box-info{
+    height: 40rem;
+    display: flex;
+}
+
+.info-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.info-text h3{
+    font-size: 3rem;
+    margin-bottom:3rem;
+}
+
+.info-img{
+    flex: 1;
+    height: 100%;
+    width: 30rem !important;
+    background: url('../images/hero_1.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.btn-download{
+    z-index: 3;
+    position: relative;
+    padding: 1rem;
+    border: none;
+    /* border: 1px solid var(--color-green); */
+    cursor: pointer;
+    background: var(--color-white);
+    /* background:linear-gradient(to left,#8bc979,#57d131); */
+    color: var(--color-black);
+    transition: var(--default-transition);
+}
+
+.btn-download::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--color-green);
+    z-index: -1;
+    width: 50%;
+    transition: var(--default-transition);
+}
+
+.btn-download:hover::after{
+    width: 100%;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-green);
+    border-bottom: 1px solid var(--color-green);
+    border-right: 1px solid var(--color-green);
+    
+}
 /*------------------------------------*/
