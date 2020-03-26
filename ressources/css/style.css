@@ -3,11 +3,13 @@
 :root{
     --color-white: #fff;
     --color-black: #000;
+    --color-blue:#0b2239;
     --color-green: #57d131;
     --default-transition: all .3s;
     --color-gray: #5e5d5d;
     --white-fade:#e7e7e7;
     --white-gradient:#f9f8f3;
+    --arrow-color: aquamarine;
 }
 
 /*------------------------------------*/
@@ -32,6 +34,7 @@ html{
 body{
     box-sizing: border-box;
     font-size: 1.6rem;
+    position: relative;
 }
 
 a,a:hover{
@@ -43,7 +46,7 @@ a,a:hover{
 
 /************->ONE PAGE INDEX *********<-*/
 
-.header{
+#header{
     height: 100vh;
     position: relative;
 }
@@ -151,7 +154,7 @@ animation: yv-effect 1.5s infinite;
     font-size: 5rem;
     position: relative;
     cursor: default;
-    color: var(--color-gray);
+    color: var(--color-blue);
     margin-bottom: 10rem;
 }
 
@@ -421,5 +424,36 @@ top: calc(50% - 3px);
 
 .t-input:focus{
     border: 1px solid var(--color-green);
+}
+
+.fa-arrow-circle-o-up{
+    font-size: 5rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    color: var(--color-green);
+    cursor: pointer;
+    transition: var(--default-transition);
+}
+
+.fa-arrow-circle-o-up:hover{
+    color: var(--arrow-color);
+}
+
+#footer{
+    background: var(--color-blue);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.img-footer{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+#footer p{
+    color: var(--color-white);
+    margin-top: 2rem;
 }
 /*------------------------------------*/
