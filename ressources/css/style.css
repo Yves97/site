@@ -66,11 +66,22 @@ a,a:hover{
     color: var(--color-black);
 }
 
+.d-none{
+    display: none;
+}
+
+.clP{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0 0);
+    /* transition: var(--default-transition); */
+}
+
 /*------------------------------------*/
 
 /************->ONE PAGE INDEX *********<-*/
 
 #header{
+    background-color: var(--dark-theme-color);
+    z-index: 2000;
     min-height: 100vh;
     position: relative;
 }
@@ -107,28 +118,6 @@ a,a:hover{
     color: var(--color-green);
 }
 
-.carousel-item{
-    height: 100vh;
-}
-
-.banner-info{
-    position: absolute;
-    width: 50rem;
-    background: rgba(0, 0, 0, 0.308);
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%,-30%);
-    padding: 1rem;
-    border-left: 2px solid var(--color-green);
-    color: var(--color-white);
-}
-
-.banner-info h3{
-    font-size: 4rem;
-    margin-bottom: 2rem;
-}
-
-
 #mycarousel{
     position: relative;
     z-index: 700;
@@ -136,6 +125,7 @@ a,a:hover{
 
 .carousel-inner, .carousel-item{
     height: 100vh;
+    transition:  var(--default-transition) !important;
 }
 
 .main-message{
@@ -242,7 +232,6 @@ a,a:hover{
 }
 
 .box-info{
-    height: 40rem;
     display: flex;
 }
 
@@ -252,7 +241,8 @@ a,a:hover{
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    color: var(--color-white);
+    margin-bottom: 2rem;
+    color: var(--white-gradient);
 }
 
 .info-text h3{
@@ -266,8 +256,8 @@ a,a:hover{
 
 .info-img{
     flex: 1;
-    height: 100%;
-    width: 30rem !important;
+    height: 40rem;
+    /* width: 30rem !important; */
     background: url('../images/hero_1.jpg') center no-repeat;
     background-size: cover;
 }
