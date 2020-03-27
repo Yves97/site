@@ -144,7 +144,7 @@ ul li{
 }
 
 .content-message{
-    width: 60rem;
+    width: 50%;
     padding: .7rem;
     background: rgba(0, 0, 0, 0.404);
     border-left: 2px solid var(--color-green);
@@ -329,6 +329,16 @@ ul li{
     background-color: var(--color-blue);
 }
 
+.box-timeline{
+    height: 50rem;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0px 0px 20px -4px rgb(255, 255, 255);
+}
+
+.box-timeline::-webkit-scrollbar{
+    display: none;
+}
 
 .timeline ul {
     background: var(--dark-theme-color);
@@ -524,8 +534,8 @@ opacity: 0;
     border: 1px solid var(--color-green);
 }
 
-.fa-arrow-circle-o-up{
-    font-size: 5rem;
+.fa-arrow-circle-up{
+    font-size: 4rem;
     position: fixed;
     bottom: 4rem;
     right: 2rem;
@@ -534,8 +544,8 @@ opacity: 0;
     transition: var(--default-transition);
 }
 
-.fa-arrow-circle-o-up:hover{
-    color: var(--arrow-color);
+.fa-arrow-circle-up:hover{
+    color: var(--white-gradient);
 }
 
 #footer{

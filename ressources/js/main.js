@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-
     //------------------------>TimeLines Search
     /* Check the location of each element */
     $('.content').each( function(i){
