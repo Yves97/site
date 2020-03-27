@@ -120,18 +120,6 @@ $(document).ready(function () {
             setWidth();
         });
     }
-
-    //--> 
-    // let typed = new Typed('.type',{
-    //     strings: 
-    //     ['Yves Amani CV'],
-    //     typeSpeed:100,
-    //     backSpeed:200,
-    //     smartBackspace: false,
-    //     // shuffle:true,
-    //     loop:true,
-    //     showCursor: false
-    //     });
 });
 
 
