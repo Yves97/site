@@ -82,7 +82,7 @@ ul li{
 }
 
 .polnone{
-    clip-path: polygon(49% 0, 50% 0, 100% 0, 100% 89%, 70% 100%, 30% 100%, 0 88%, 0 0);;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 }
 
 .tg-rotate{
@@ -190,11 +190,6 @@ ul li{
 	z-index: 10;
 }
 
-/* #pg::-moz-progress-bar {
-	background-color: #D4AF37;
-	z-index: 10;
-} */
-
 .progress-container {
 	width: 100%;
 	background-color: transparent;
@@ -253,19 +248,16 @@ ul li{
     }
 }
 
-.td .char{
+.titles .char{
     animation : anime 2s ease-in-out infinite;
-    transform: translateY(-.5rem) ;
-    animation-delay: calc(0.05s * var(--char-percent));
-
 }
 
 @keyframes anime{
     0%,100%{
-        transform: translateY(-.5rem) rotate(-20deg);
+        transform: translateX(.5rem) ;
     }
     50%{
-        transform : translateY(.5rem) rotate(20deg)
+        transform : translateX(-.5rem) 
     }
 }
 
