@@ -262,7 +262,6 @@ ul li{
 .info-img{
     flex: 1;
     height: 40rem;
-    /* width: 30rem !important; */
     background: url('../images/hero_1.jpg') center no-repeat;
     background-size: cover;
 }
@@ -322,7 +321,6 @@ ul li{
     appearance: none;
     width: 100%;
     height: 1rem;
-    /* background-color: var(--color-blue) !important; */
 }
 
 .skills progress[value]::-webkit-progress-bar{
@@ -338,7 +336,7 @@ ul li{
     height: 50rem;
     border-radius: 10px;
     overflow: auto;
-    box-shadow: 0px 0px 20px -4px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px -4px var(--white-gradient);
 }
 
 .box-timeline::-webkit-scrollbar{
@@ -358,7 +356,7 @@ ul li{
 }
 
 .timeline ul li:last-child {
-    padding-bottom: 7px;
+    padding-bottom: .7rem;
 }
 
 .timeline ul li:before {
@@ -451,7 +449,6 @@ opacity: 0;
 
 .portfolio-menu button{
     margin-bottom: 1rem;
-    
     margin-right: 1.5rem;
     border: 1px solid var(--color-blue);
     background-color: var(--color-white);
@@ -602,31 +599,32 @@ opacity: 0;
 
 @media screen and (max-width: 1020px) {
     .timeline ul li .content {
-      width: 41vw;
+        width: 41vw;
     }
-  
+
     .timeline ul li:nth-child(even) .content {
-      left: calc(-41vw - 45px);
+        left: calc(-41vw - 4.5rem);
     }
-  }
-  @media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 700px) {
     .timeline ul li {
-      margin-left: 20px;
+        margin-left: 2rem;
     }
     .timeline ul li .content {
-      width: calc(100vw - 100px);
+        width: calc(100vw - 100px);
     }
     .timeline ul li .content h2 {
-      text-align: initial;
+        text-align: initial;
     }
     .timeline ul li:nth-child(even) .content {
-      left: 45px;
-      background: var(--color-green);
-      background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--color-green));
-      background: linear-gradient(-45deg, var(--green-gradient), var(--color-green));
+        left: 4.5rem;
+        background: var(--color-green);
+        background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--color-green));
+        background: linear-gradient(-45deg, var(--green-gradient), var(--color-green));
     }
     .timeline ul li:nth-child(even) .content:before {
-      left: -33px;
+        left: -3.3rem;
     }
-  }
+}
 /*------------------------------------*/
