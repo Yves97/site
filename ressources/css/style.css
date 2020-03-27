@@ -376,11 +376,23 @@ opacity: 0;
 
 .timeline ul li .content h2 {
     color: var(--white-gradient);
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
+    color: var(--color-blue);
+}
+
+.timeline ul li .content h4{
+    font-size: 2rem !important;
+    color: var(--white-gradient);
+    margin-bottom: 2rem;
 }
 
 .timeline ul li .content p {
-    
+    color: var(--color-blue);
+    transition: var(--default-transition);
+}
+
+.timeline ul li .content a:hover{
+    color: var(--color-white) !important;
 }
 
 .timeline ul li .content:before {
