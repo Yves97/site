@@ -31,6 +31,12 @@ $(document).ready(function () {
             $('.navbar').removeClass('d-none')
             $('.carousel-item').removeClass('polnone')
         }
+        if($(window).scrollTop() == 0){
+            $('.fa-arrow-circle-up').css({display:'none'})
+        }
+        if($(window).scrollTop() != 0){
+            $('.fa-arrow-circle-up').css({display:'block'})
+        }
 
         //->TIMELINE
         /* Check the location of each eleme hidden */
