@@ -4,410 +4,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /*--- Default css strats---*/
-html, body {
-  height: 100%;
-}
 
-body {
-  font-family: sans-serif;
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #333333;
-  font-weight: 400;
-  text-rendering: optimizeSpeed;
+.timeline h1,
+.timeline ul li .content h2 {
+  text-shadow: 1px 1px 1px rgba(56, 56, 56, 0.5);
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #333333;
-  font-weight: 600;
-}
-
-p {
-  letter-spacing: 0;
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-a:focus {
-  outline: none;
-  text-decoration: none;
-}
-
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*---Default css ends---*/
-/*---------- Nav area css starts -------------*/
-.navbar-nav {
-  margin-top: 15px;
-  width: 100%;
-}
-
-.nav li .active {
-  color: #00a7be !important;
-  font-weight: 900;
-}
-
-.navbar {
-  margin-bottom: 0;
-  color: #000000;
-}
-
-.navbar li {
-  display: inline-block;
-  float: none;
-}
-
-.navbar li a {
-  color: #333333;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1rem;
-}
-.navbar li a:hover {
-  color: #00a7be;
-  text-decoration: none;
-}
-
-.navbar li.active a {
-  font-weight: bold;
-  color: #00a7be;
-}
-
-/*---------- Nav area css ends -------------*/
-.col-12 {
-  height: 100%;
-  margin: 0;
-  overflow: visible;
-}
-
-.card {
-  height: 25vh;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  overflow: visible;
-  padding: 5px;
-}
-
-img {
-  border-radius: 0;
-  height: 90%;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-img:hover {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.card:hover .card-text {
-  font-size: 1rem;
-  color: #00a7be;
-}
-
-.card-body {
-  padding: 0;
-  margin: 0;
+.timeline h1 {
+  background: #3d9e67;
+  padding: 70px 0;
+  font-size: 2.5em;
   text-align: center;
 }
-
-.card-text {
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  font-size: 1rem;
-  background: #333333;
-  white-space: nowrap;
-  width: 100%;
+.timeline ul {
+  background: #faf8eb;
+  padding: 50px 0;
 }
-
-/*---------- works area css end  --------*/
-/*---------- modal css start  --------*/
-.modal-dialog {
-  max-width: 100vw;
+.timeline ul li {
+  background: #67cc8e;
+  position: relative;
+  margin: 0 auto;
+  width: 5px;
+  padding-bottom: 40px;
+  list-style-type: none;
 }
-
-.modal-content {
-  border: none;
-  background: rgba(0, 0, 0, 0.7);
+.timeline ul li:last-child {
+  padding-bottom: 7px;
 }
-.modal-content .modal-header {
-  border: none;
+.timeline ul li:before {
+  content: "";
+  background: #faf8eb;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid #67cc8e;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
-.modal-content .modal-header span {
-  color: #ffffff;
+.timeline ul li .hidden {
+  opacity: 0;
 }
-.modal-content .modal-body {
-  padding: 10px;
+.timeline ul li .content {
+  background: #67cc8e;
+  position: relative;
+  top: 7px;
+  width: 450px;
+  padding: 20px;
+}
+.timeline ul li .content h2 {
+  color: #fff;
+  padding-bottom: 10px;
   text-align: center;
 }
-.modal-content .modal-body .upper {
-  height: fit-content;
-  display: flex;
-}
-.modal-content .modal-body .upper .text {
-  width: 30vw;
-  color: #ffffff;
-  text-align: left;
-  padding: 5%;
-}
-.modal-content .modal-body .upper .text h2 {
-  font-size: 2rem;
-  color: #ffffff;
-}
-.modal-content .modal-body .upper .text h3 {
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-.modal-content .modal-body .upper .text p {
-  font-size: 0.8rem;
-  margin: 0;
-}
-.modal-content .modal-body .upper .product-image {
-  max-width: 70vw;
-}
-.modal-content .modal-body .upper .product-image .active1 {
-  max-height: 60vh;
-  padding: 10px;
-  object-fit: contain;
-}
-.modal-content .modal-body .sideImg {
-  width: 100%;
-  box-sizing: border-box;
-}
-.modal-content .modal-body .sideImg ul {
-  width: 100%;
+.timeline ul li .content p {
   text-align: center;
 }
-.modal-content .modal-body .sideImg ul li {
-  display: inline-block;
-  height: 20vh;
-  width: 20vw;
+.timeline ul li .content:before {
+  content: "";
+  background: #67cc8e;
+  position: absolute;
+  top: 0px;
+  width: 38px;
+  height: 5px;
 }
-.modal-content .modal-body .sideImg ul li img {
-  height: 100%;
-  object-fit: cover;
-  padding: 5px;
+.timeline ul li:nth-child(odd) .content {
+  left: 50px;
+  background: #67cc8e;
+  background: -webkit-linear-gradient(-45deg, #56bc83, #67cc8e);
+  background: linear-gradient(-45deg, #56bc83, #67cc8e);
 }
-.modal-content .modal-body .sideImg ul li img:hover {
-  opacity: 0.7;
+.timeline ul li:nth-child(odd) .content:before {
+  left: -38px;
 }
-@media (max-width: 770px) {
-  .modal-content .modal-body .upper {
-    display: block;
-  }
-  .modal-content .modal-body .upper .text {
-    height: fit-content;
-    width: 100%;
-  }
-  .modal-content .modal-body .upper .product-image {
-    max-width: 100vw;
-  }
-  .modal-content .modal-body .upper .product-image .active1 {
-    max-height: 60vh;
-    padding: 10px;
-    object-fit: contain;
-  }
-  .modal-content .modal-body .sideImg ul {
-    text-align: left;
-  }
-  .modal-content .modal-body .sideImg ul li {
-    height: 50px;
-    width: 50px;
-  }
+.timeline ul li:nth-child(even) .content {
+  left: calc(-450px - 45px);
+  background: #67cc8e;
+  background: -webkit-linear-gradient(45deg, #56bc83, #67cc8e);
+  background: linear-gradient(45deg, #56bc83, #67cc8e);
 }
-@media (orientation: landscape) and (max-height: 500px) {
-  .modal-content .modal-body .upper {
-    display: block;
-  }
-  .modal-content .modal-body .upper .text {
-    height: fit-content;
-    width: 100%;
-  }
-  .modal-content .modal-body .upper .product-image {
-    height: 70%;
-    width: 100%;
-  }
-  .modal-content .modal-body .sideImg ul {
-    text-align: center;
-  }
-  .modal-content .modal-body .sideImg ul li {
-    height: 50px;
-    width: 50px;
-  }
-}
-.modal-content .modal-footer {
-  border: none;
-  justify-content: center;
-  align-content: center;
-}
-.modal-content .modal-footer .btn {
-  background: transparent;
-  border: #ffffff solid 2px;
+.timeline ul li:nth-child(even) .content:before {
+  right: -38px;
 }
 
-/*---------- modal css end  --------*/
+/* -------------------------
+   ----- Media Queries ----- 
+   ------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+    width: 41vw;
+  }
+
+  .timeline ul li:nth-child(even) .content {
+    left: calc(-41vw - 45px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li .content h2 {
+    text-align: initial;
+  }
+  .timeline ul li:nth-child(even) .content {
+    left: 45px;
+    background: #67cc8e;
+    background: -webkit-linear-gradient(-45deg, #56bc83, #67cc8e);
+    background: linear-gradient(-45deg, #56bc83, #67cc8e);
+  }
+  .timeline ul li:nth-child(even) .content:before {
+    left: -33px;
+  }
+}
+
 
     </style>
     <title>Document</title>
 </head>
 <body>
-    <div class="col-12">
-        <ul class="nav navbar navbar-light filters text-center">
-            <li class="active" data-filter="*"><a href="#!">All</a></li>
-            <li data-filter=".graphic"><a href="#!">Graphic Design</a></li>
-            <li data-filter=".uiUx"><a href="#!">UI/UX</a></li>
-            <li data-filter=".exhibition"><a href="#!">Exhibition</a></li>
-            <li data-filter=".archi"><a href="#!">Architecture</a></li>
-        </ul> 
-
-        <div class="projects">
-            <div class="row col-12">
-                        <div class="card col-12  col-md-4 item graphic">
-                            <img class="card-img-top work-img" src="https://gratisography.com/wp-content/uploads/2019/12/gratisography-concrete-architecture-2-900x600.jpg" data-toggle="modal" data-target="#workModal1"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album1</h2>
-                            </div>
-                        </div>
-
-                        <div class="card col-12  col-md-4 item uiUx">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/wp-content/uploads/2019/12/gratisography-mountains-scenic-horizon-900x547.jpg" data-toggle="modal" data-target="#workModal2"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album2</h2>
-                            </div>
-                        </div>
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/wp-content/uploads/2019/11/gratisography-city-glass-buildings-900x600.jpg" data-toggle="modal" data-target="#workModal3"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album3</h2>
-                            </div>
-                        </div>
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/wp-content/uploads/2019/11/gratisography-urban-construction-staging-900x600.jpg" data-toggle="modal" data-target="#workModal4"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album4</h2>
-                            </div>   
-                        </div>
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/thumbnails/gratisography-brick-vine-thumbnail.jpg" data-toggle="modal" data-target="#workModal5"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album5</h2>
-                            </div>     
-                        </div> 
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/thumbnails/gratisography-64-thumbnail.jpg" data-toggle="modal" data-target="#workModal6"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album6</h2>
-                            </div>   
-                        </div>
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/thumbnails/gratisography-352-thumbnail.jpg" data-toggle="modal" data-target="#workModal7"/>
-                            <div class="card-body">
-                                <h2 class="card-text">Album7</h2>
-                            </div>
-                        </div>
-
-                        <div class="card col-12  col-md-4 item exhibition">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/thumbnails/gratisography-315-thumbnail.jpg" data-toggle="modal" data-target="#workModal8"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album8</h2>
-                            </div>
-                        </div>
-                        <div class="card col-12  col-md-4 item archi">
-                            <img class="card-img-top  work-img" src="https://gratisography.com/thumbnails/gratisography-61-thumbnail.jpg" data-toggle="modal" data-target="#workModal9"/>
-                            <div class="card-body">
-                            <h2 class="card-text">Album9</h2>
-                            </div>  
-                        </div>
-
-                
-            </div>
+  <section class="timeline">
+    <ul>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2016</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis praesentium itaque veniam dolorum cupiditate asperiores optio beatae, qui perferendis ipsam odit modi nemo natus corrupti neque quos distinctio facilis?</p>
         </div>
-    </div>
-</div>
-</div>
-
-
-
-
-<!-- modal9 end -->
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2015</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati quas, reiciendis quis sequi voluptatem consectetur adipisci accusamus hic vel vero ea ad iure! Natus, ipsum, enim aspernatur fugit voluptatibus similique?</p>
+        </div>
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2012</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, expedita. Dolorem blanditiis, delectus omnis eos accusamus mollitia et cupiditate officia maxime vel, nesciunt alias eius, quibusdam in ea eveniet ut!</p>
+        </div>
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2010</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptas voluptatum dolorum, quibusdam dignissimos animi pariatur laboriosam quis explicabo similique aperiam debitis quam velit quod, reprehenderit harum ratione. Iste, unde?</p>
+        </div>
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2008</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet inventore odit placeat in laboriosam dolore ducimus vero, sapiente ipsam veritatis, numquam libero itaque dolores natus ex aliquam nam nihil cumque.</p>
+        </div>
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2007</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit sequi nobis, blanditiis quae dolorem quasi reiciendis odio qui fugit? Officiis quos aspernatur mollitia dolorum pariatur repellendus quaerat dolorem magnam quo.</p>
+        </div>
+      </li>
+      <li>
+        <div class="content">
+          <h2>
+            <time>2004</time>
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel corporis sunt nostrum velit quibusdam neque porro ratione quos dolor libero. Tempore consequatur natus nostrum delectus provident fugiat corporis error ipsa.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+    
     <script src="ressources/js/jquery.js"></script>
     <!-- <script src="ressources/js/isotope.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script>
-$(document).ready(function () {
-    'use strict';
+        /* Check the location of each element */
+$('.content').each( function(i){
   
-//***********isotope js
-	var $projects = $('.projects');
-
-    $projects.isotope({
-        itemSelector: '.item',
-        layoutMode: 'fitRows'
-    });
-
-    $('ul.filters > li').on('click', function(e){
-
-        e.preventDefault();
-
-        var filter = $(this).attr('data-filter');
-
-        $('ul.filters > li').removeClass('active');
-        $(this).addClass('active');
-
-        $projects.isotope({filter: filter});
-
-    });
-
-
-// ***********bootstarp Modal
-   $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-          })
-
+  var bottom_of_object= $(this).offset().top + $(this).outerHeight();
+  var bottom_of_window = $(window).height();
   
-
-    $(".nav .nav-link").on("click", function(){
-     $(".nav").find(".active").removeClass("active");
-     $(this).addClass("active");
-  });
-
+  if( bottom_of_object > bottom_of_window){
+    $(this).addClass('hidden');
+  }
 });
+
+
+$(window).scroll( function(){
+    /* Check the location of each element hidden */
+    $('.hidden').each( function(i){
+      
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+      
+        /* If the object is completely visible in the window, fadeIn it */
+        if( bottom_of_window > bottom_of_object ){
+          $(this).animate({'opacity':'1'},700);
+        }
+    });
+});
+
     </script>
 </body>
 </html>

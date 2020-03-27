@@ -1,8 +1,20 @@
 
 $(document).ready(function () {
-        /*<-scorll navbar js->*/
+
+    //------------------------>TimeLines Search
+    /* Check the location of each element */
+    $('.content').each( function(i){
+
+        var bottom_of_object= $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).height();
+        
+        if( bottom_of_object > bottom_of_window){
+            $(this).addClass('hidden');
+        }
+    });
+    
+    //--> Listening Scroll Event
     $(window).scroll(function(){
-        // console.log('yes')
         if($(window).scrollTop() > 60 ){
             // console.log($(window).scrollTop())
             $('.navbar').addClass('d-none')
@@ -17,9 +29,20 @@ $(document).ready(function () {
         if($(window).scrollTop() < 102){
             $('.carousel-item').removeClass('clP')
         }
-    })
 
-    //***********isotope js
+        //------------------------>TimeLine
+        /* Check the location of each element hidden */
+        $('.hidden').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fadeIn it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},700);
+            }
+        });
+    });
+
+    //-----------> isotope js
     var $portfolioItem = $('.portfolio-item');
     // console.log($portfolioItem)
 
