@@ -1,9 +1,7 @@
-
 $(document).ready(function () {
-    //------------------------>TimeLines Search
+    //-->TIMELINE
     /* Check the location of each element */
     $('.content').each( function(i){
-
         var bottom_of_object= $(this).offset().top + $(this).outerHeight();
         var bottom_of_window = $(window).height();
         
@@ -11,7 +9,6 @@ $(document).ready(function () {
             $(this).addClass('hidden');
         }
     });
-    
     //--> Listening Scroll Event
     $(window).scroll(function(){
         if($(window).scrollTop() > 60 ){
@@ -21,16 +18,9 @@ $(document).ready(function () {
         if($(window).scrollTop() < 61 ){
             $('.navbar').removeClass('d-none')
         }
-        if($(window).scrollTop() > 101){
-            // console.log('yes')
-            $('.carousel-item').addClass('clP')
-        }
-        if($(window).scrollTop() < 102){
-            $('.carousel-item').removeClass('clP')
-        }
 
-        //------------------------>TimeLine
-        /* Check the location of each element hidden */
+        //->TIMELINE
+        /* Check the location of each eleme hidden */
         $('.hidden').each( function(i){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -41,24 +31,76 @@ $(document).ready(function () {
         });
     });
 
-    //-----------> isotope js
+    //-> ISOTOPE
     var $portfolioItem = $('.portfolio-item');
     // console.log($portfolioItem)
-
     $portfolioItem.isotope({
         itemSelector: '.item',
         layoutMode: 'fitRows'
     });
-
     $('.portfolio-menu button').on('click', function(e){
-
         e.preventDefault();
-
         var filter = $(this).attr('data-filter');
-
         $('.portfolio-menu button').removeClass('active');
         $(this).addClass('active');
         $portfolioItem.isotope({filter: filter});
     });
 
+
+    //->PROGRESS NAVBAR
+    var getMax = function() {
+        return $(document).height() - $(window).height();
+    }
+    var getValue = function() {
+        return $(window).scrollTop();
+    }
+    if ('max' in document.createElement('progress')) {
+        var progressBar = $('progress#pg');
+        // progressBar.attr('class', 'navbarprogress')
+        // console.log(progressBar)
+        
+        progressBar.attr({
+            max: getMax(),
+        });
+        $(document).on('scroll', function() {
+            progressBar.attr({
+                value: getValue()
+            });
+        });
+        $(window).resize(function() {
+            progressBar.attr({
+                max: getMax(),
+                value: getValue()
+            });
+        });
+        } else {
+        var progressBar = $('.progress-bar'),
+            max = getMax(),
+            value, width;
+
+        var getWidth = function() {
+
+            value = getValue();
+            width = (value / max) * 100;
+            width = width + '%';
+            return width;
+        }
+
+        var setWidth = function() {
+            progressBar.css({
+                width: getWidth()
+            });
+        }
+        $(document).on('scroll', setWidth);
+        $(window).on('resize', function() {
+            max = getMax();
+            setWidth();
+        });
+    }
 });
+
+//-> Parallax Js
+var images = document.querySelector('.images');
+new simpleParallax(images),{
+    scale: 2
+};
