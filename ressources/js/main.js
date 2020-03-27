@@ -3,6 +3,11 @@
 
 
 $(document).ready(function () {
+    //--> NAVBAR TOGGLER ARROW
+    $('.navbar-toggler').click(function(e){
+        console.log($('.fa-arrow-down'))
+        $('.fa-arrow-down').toggleClass('tg-rotate')
+    })
     //--> WOW JS
     new WOW().init()
 

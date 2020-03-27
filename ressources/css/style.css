@@ -102,6 +102,19 @@ ul li{
     font-size: 2rem;
 }
 
+.navbar-toggler{
+    border: 1px solid var(--white-gradient);
+}
+
+.fa-arrow-down{
+    color: var(--white-gradient);
+    transition: var(--default-transition);
+}
+
+.tg-rotate{
+    transform: rotate(180deg);
+}
+
 #my-nav{
     justify-content: center!important;
 }
