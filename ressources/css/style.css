@@ -312,6 +312,11 @@ ul li{
     color: var(--white-gradient);
 }
 
+.skills p img{
+    height: 3rem;
+    width: 3rem;
+}
+
 .skills progress[value]{
     -webkit-appearance: none;
     appearance: none;
