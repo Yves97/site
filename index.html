@@ -16,9 +16,23 @@
     <link rel="stylesheet" href="ressources/css/splitting.css">
     <link rel="stylesheet" href="ressources/css/splitting-cells.css">
     <link rel="stylesheet" href="ressources/css/style.css">
+    
+    <!--loader script-->
+    <script>
+        window.addEventListener('load',()=>{
+            let test = document.querySelector('#loader').className += ' hidden'
+            // console.log(test)
+        })
+        
+    </script>
+
     <title>KVYV | Curiculum Vitae</title>
 </head>
 <body>
+    <div id="loader">
+        <img src="ressources/images/3.svg">
+    </div>
+
     <header id="header">
         <nav class="navbar navbar-expand-lg fixed-top wow fadeInDown" data-wow-duration="1s" >
             <a class="navbar-brand">Kvyv</a>
@@ -74,7 +88,7 @@
             </div>
         </div>
         <div id="scroll-invitation">
-            <a href="#"><span></span></a>
+            <a href="#about"><span></span></a>
         </div>
     </div>
     </header>
