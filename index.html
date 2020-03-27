@@ -42,17 +42,14 @@
             </div>
         </nav>
         <progress value="0" max="1" id="pg">
-            <!-- Older browsers look to the old div style of progress bars -->
-            <!-- Newer browsers ignore this stuff but it allows older browsers to 
-            still have a progress bar. -->
             <div class="progress-container">
                 <span class="progress-bar"></span>    
             </div>
         </progress>
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="images" style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/reservation_1.jpg') center no-repeat;background-size: cover;width: 100%;height:100vh;"></div>
+                <div class="carousel-item active" >
+                    <div  style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/reservation_1.jpg') center no-repeat;background-size: cover;width: 100%;height:100vh;"></div>
                 </div>
                 <!-- <div class="carousel-item">
                     <div  class ="images" style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/m-blog-5.jpg') center no-repeat;background-size: cover;width: 100%;height:100%;"></div>
@@ -84,7 +81,8 @@
                 <div class="box-info">
                     <div class="info-text">
                         <div>
-                            <h3>Kouadio A. Yves</h3>
+                            <h4>Hello,</h4>
+                            <h3>Mon nom est <span style="color: var(--color-blue);">Yves</span></h3>
                             <p>Développeur  Front End  Junior ivoirien passionné du monde de la programmation et du web en constante évolution.  Je pense que ma passion pour le développement pourra m’aider  à mener à bien de nouveaux projets.</p>
                             <a href="#">
                                 <button class="btn-download"> Télécharger CV  <i class="fas fa-cloud-download-alt    "></i></button>
@@ -106,7 +104,7 @@
                             <img class="img-fluid" src="ressources/images/html-5.svg" alt="html-5">
                             HTML
                         </p>
-                        <progress class="l" max="100" value="75"></progress>
+                        <progress max="100" value="75"></progress>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -114,7 +112,7 @@
                         <p> 
                             <img class="img-fluid" src="ressources/images/css.svg" alt="css">
                             Css 3 / Responsive - Sass - Bootstrap 4 </p>
-                        <progress class="l" max="100" value="70"></progress>
+                        <progress  max="100" value="70"></progress>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -123,7 +121,7 @@
                             <img class="img-fluid" src="ressources/images/js.svg" alt="js">
                             Javascript / VueJs - Jquery - NodeJs 
                         </p>
-                        <progress class="l" max="100" value="60"></progress>
+                        <progress  max="100" value="60"></progress>
                     </div>
                 </div>  
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -132,15 +130,16 @@
                             <img class="img-fluid" src="ressources/images/php.svg" alt="php">
                             PHP 7 / MySql
                         </p>
-                        <progress class="l" max="100" value="40"></progress>
+                        <progress  max="100" value="40"></progress>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <div class="skills">
-                        <p> <img class="img-fluid" src="ressources/images/python.svg" alt="python">
+                        <p> 
+                            <img class="img-fluid" src="ressources/images/python.svg" alt="python">
                             Python / Django
                         </p>
-                        <progress class="l" max="100" value="35"></progress>
+                        <progress  max="100" value="35"></progress>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -149,28 +148,34 @@
                             <img class="img-fluid" src="ressources/images/sql.svg" alt="sql">
                             SQL
                         </p>
-                        <progress class="l" max="100" value="60"></progress>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <div class="skills">
-                        <p>Réseaux & Récurité Informatique</p>
-                        <progress class="l" max="100" value="50"></progress>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <div class="skills">
-                        <p>Dart / Flutter</p>
-                        <progress class="l" max="100" value="30"></progress>
+                        <progress  max="100" value="60"></progress>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <div class="skills">
                         <p>
-                            <img class="img-fluid" src="ressources/images/github-image.svg" alt="">
+                            <img class="img-fluid" src="ressources/images/network.png" alt="">
+                            Réseaux & Récurité Informatique
+                        </p>
+                        <progress  max="100" value="50"></progress>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="skills">
+                        <p>
+                            <img class="img-fluid" src="ressources/images/flutter-logo.svg" alt="flutter">
+                            Dart / Flutter
+                        </p>
+                        <progress  max="100" value="30"></progress>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="skills">
+                        <p>
+                            <img class="img-fluid" src="ressources/images/github-logo2.svg" alt="github">
                             Git / Github
                         </p>
-                        <progress class="l"max="100" value="65"></progress>
+                        <progress max="100" value="65"></progress>
                     </div>
                 </div>
             </div>
@@ -292,7 +297,7 @@
     <script src="ressources/js/jquery.js"></script>
     <script src="ressources/js/bootstrap.min.js"></script>
     <script src="ressources/js/isotope.js"></script>
-    <script src="ressources/js/simple-parallax.min.js"></script>
+    <script src="ressources/js/parallax.min.js"></script>
     <script src="ressources/js/main.js"></script>
 </body>
 </html>

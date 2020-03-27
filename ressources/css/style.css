@@ -38,6 +38,7 @@ body{
     width: 100%;
     font-size: 1.6rem;
     position: relative;
+    background-color: var(--dark-theme-color)   ;
     transition: var(--default-transition);
 }
 
@@ -73,7 +74,7 @@ ul li{
 
 .d-none{
     display: none;
-    transition: var(--default-transition);
+    transition: all .4s;
 }
 
 /*------------------------------------*/
@@ -82,14 +83,17 @@ ul li{
 
 #header{
     background-color: var(--dark-theme-color);
-    z-index: 2000;
+    /* z-index: 2000; */
     min-height: 100vh;
     position: relative;
+
 }
 
 .navbar{
     background: transparent;
     padding: 1rem;
+    transition: all .3s !important;
+    /* display: inline-block; */
 }
 
 .navbar-brand{
@@ -127,8 +131,15 @@ ul li{
 
 .carousel-inner, .carousel-item{
     height: 100vh;
+    transition: all .3s;
+    /* clip-path: polygon(49% 0, 50% 0, 100% 0, 100% 89%, 70% 100%, 30% 100%, 0 88%, 0 0); */
     /* transition:  clip-path 1s; */
 }
+
+.polnone{
+    clip-path: polygon(49% 0, 50% 0, 100% 0, 100% 89%, 70% 100%, 30% 100%, 0 88%, 0 0);;
+}
+
 
 ::-webkit-scrollbar {
 	display: none;
@@ -303,10 +314,16 @@ ul li{
     color: var(--white-gradient);
 }
 
+.info-text h4{
+    font-size: 4rem;
+    color: var(--color-blue);
+}
+
 .info-text h3{
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom:3rem;
 }
+
 
 .info-text p{
     width: 70%;
@@ -315,8 +332,8 @@ ul li{
 .info-img{
     flex: 1;
     height: 40rem;
-    background: url('../images/hero_1.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/undraw_feeling_proud_qne1.svg') center no-repeat;
+    background-size: contain;
 }
 
 .btn-download{
@@ -611,6 +628,7 @@ opacity: 0;
     background: var(--color-blue);
     padding: 2rem 0;
     text-align: center;
+    clip-path: polygon(49% 0, 50% 0, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 30%);
 }
 
 .img-footer{
@@ -628,7 +646,7 @@ opacity: 0;
 
 /************->MEDIA QUERIES *********<-*/
 
-@media screen and (max-width:380px){
+@media screen and (max-width:740px){
     .carousel-inner{
         height: 100vh;
     }

@@ -1,4 +1,9 @@
+
+
+
+
 $(document).ready(function () {
+    //--> PARALLAX
     //-->TIMELINE
     /* Check the location of each element */
     $('.content').each( function(i){
@@ -14,9 +19,11 @@ $(document).ready(function () {
         if($(window).scrollTop() > 60 ){
             // console.log($(window).scrollTop())
             $('.navbar').addClass('d-none')
+            $('.carousel-item').addClass('polnone')
         }
         if($(window).scrollTop() < 61 ){
             $('.navbar').removeClass('d-none')
+            $('.carousel-item').removeClass('polnone')
         }
 
         //->TIMELINE
@@ -99,8 +106,4 @@ $(document).ready(function () {
     }
 });
 
-//-> Parallax Js
-var images = document.querySelector('.images');
-new simpleParallax(images),{
-    scale: 2
-};
+
