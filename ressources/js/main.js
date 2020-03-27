@@ -3,7 +3,13 @@
 
 
 $(document).ready(function () {
-    //--> PARALLAX
+    //--> WOW JS
+    new WOW().init()
+
+    //--> SPLITTING JS
+    Splitting();
+    // console.log('zêfpl')
+
     //-->TIMELINE
     /* Check the location of each element */
     $('.content').each( function(i){
@@ -52,7 +58,6 @@ $(document).ready(function () {
         $(this).addClass('active');
         $portfolioItem.isotope({filter: filter});
     });
-
 
     //->PROGRESS NAVBAR
     var getMax = function() {
@@ -104,6 +109,18 @@ $(document).ready(function () {
             setWidth();
         });
     }
+
+    //--> 
+    // let typed = new Typed('.type',{
+    //     strings: 
+    //     ['Yves Amani CV'],
+    //     typeSpeed:100,
+    //     backSpeed:200,
+    //     smartBackspace: false,
+    //     // shuffle:true,
+    //     loop:true,
+    //     showCursor: false
+    //     });
 });
 
 

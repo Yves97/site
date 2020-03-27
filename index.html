@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="ressources/css/animate.min.css">
     <link rel="stylesheet" href="ressources/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" /> -->
+    <link rel="stylesheet" href="ressources/css/splitting.css">
+    <link rel="stylesheet" href="ressources/css/splitting-cells.css">
     <link rel="stylesheet" href="ressources/css/style.css">
     <title>KVYV | Curiculum Vitae</title>
 </head>
 <body>
     <header id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top wow fadeInDown" data-wow-duration="1s" >
             <a class="navbar-brand">Kvyv</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,21 +53,21 @@
         <div id="mycarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" >
-                    <div  style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/reservation_1.jpg') center no-repeat;background-size: cover;width: 100%;height:100vh;"></div>
-                </div>
-                <!-- <div class="carousel-item">
-                    <div  class ="images" style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/m-blog-5.jpg') center no-repeat;background-size: cover;width: 100%;height:100%;"></div>
+                    <div style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/reservation_1.jpg') center no-repeat;background-size: cover;width: 100%;height:100vh;"></div>
                 </div>
                 <div class="carousel-item">
-                    <div  class ="images" style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/m-blog-2.jpg') center no-repeat;background-size: cover;width: 100%;height:100%;"></div>
-                </div> -->
+                    <div style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/m-blog-5.jpg') center no-repeat;background-size: cover;width: 100%;height:100%;"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background: linear-gradient(rgba(0, 0, 0, 0.24),rgba(0, 0, 0, 0.774)),url('ressources/images/m-blog-2.jpg') center no-repeat;background-size: cover;width: 100%;height:100%;"></div>
+                </div>
             </div>
             <div class="container main-message">
                 <div class="welcome-message">
                     <div class="content-message">
                         <div>
-                            <span class="type">Yves Amani CV</span>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam voluptatibus aliquam magnam adipisci id, illo reiciendis voluptas tempore? Earum tempore eveniet optio ut error fuga maxime molestiae quasi perferendis?</p>
+                            <span class="wow zoomIn test" data-splitting>Yves Amani CV</span>
+                            <p class="wow slideInDown" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam voluptatibus aliquam magnam adipisci id, illo reiciendis voluptas tempore? Earum tempore eveniet optio ut error fuga maxime molestiae quasi perferendis?</p>
                         </div>                        
                     </div>
                 </div>
@@ -77,12 +81,12 @@
     <section id="about">
         <div class="container">
             <div class="box-content-info">
-                <h3>A Propos</h3>
+                <h3 class="td" data-splitting>A Propos</h3>
                 <div class="box-info">
                     <div class="info-text">
                         <div>
-                            <h4>Hello,</h4>
-                            <h3>Mon nom est <span style="color: var(--color-blue);">Yves</span></h3>
+                            <h4 class="test" data-splitting>Hello,</h4>
+                            <h3>Mon nom est <span style="color: var(--color-blue);" class="test" data-splitting>Yves</span></h3>
                             <p>Développeur  Front End  Junior ivoirien passionné du monde de la programmation et du web en constante évolution.  Je pense que ma passion pour le développement pourra m’aider  à mener à bien de nouveaux projets.</p>
                             <a href="#">
                                 <button class="btn-download"> Télécharger CV  <i class="fas fa-cloud-download-alt    "></i></button>
@@ -297,7 +301,13 @@
     <script src="ressources/js/jquery.js"></script>
     <script src="ressources/js/bootstrap.min.js"></script>
     <script src="ressources/js/isotope.js"></script>
-    <script src="ressources/js/parallax.min.js"></script>
+    <script src="ressources/js/wow.min.js"></script>
+    <script src="ressources/js/typed.js"></script>
+    <script src="ressources/js/splitting.min.js"></script>
+
+<!-- <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script> -->
+
+    <!-- <script src="ressources/js/parallax.min.js"></script> -->
     <script src="ressources/js/main.js"></script>
 </body>
 </html>
