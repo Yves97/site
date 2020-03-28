@@ -3,9 +3,21 @@ $(document).ready(function () {
     $('.fa-arrow-circle-up').hide()
     //--> NAVBAR TOGGLER ARROW
     $('.navbar-toggler').click(function(e){
-        console.log($('.fa-arrow-down'))
+        // console.log($('.fa-arrow-down'))
         $('.fa-arrow-down').toggleClass('tg-rotate')
     })
+
+    //--> TYPED
+    let typed = new Typed('.type',{
+        strings: 
+        ['BIENVENU(E) SUR MON SITE CV 2020'],
+        typeSpeed:100,
+        backSpeed:200,
+        smartBackspace: true,
+        loop:true,
+        shuffle: true,
+        showCursor: false,
+        });
 
     //--> WOW JS
     new WOW().init()

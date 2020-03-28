@@ -134,7 +134,7 @@ ul li{
 }
 
 .navbar-brand{
-    color: var(--color-white) !important;
+    color: var(--white-gradient) !important;
     font-size: 2rem;
 }
 
@@ -239,14 +239,12 @@ ul li{
 }
 
 .welcome-message{
-    color: var(--color-white);
+    color: var(--white-gradient);
 }
 
 .content-message{
-    width: 50%;
     padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.404);
-    border-left: 2px solid var(--color-green);
+    text-align: center;
 }
 
 .content-message h5{
@@ -350,16 +348,16 @@ ul li{
 .box-content-info > h3::before, #skills h3::before, #education h3::before, #portfolio h3::before ,#contacts h3::before{
     content:" ";
     position: absolute;
-    bottom: -.4rem;
-    width: 10rem;
-    height: 2rem;
+    bottom: 0;
+    width: 50%;
+    height: 1.5rem;
     z-index: -2;
     background: var(--color-green) !important;
     transition: var(--default-transition);
 }
 
 .box-content-info > h3:hover::before, #skills h3:hover::before, #education h3:hover::before, #portfolio h3:hover::before, #contacts h3:hover::before{
-    width: 20rem;
+    width: 100%;
 }
 
 .box-info{
@@ -624,15 +622,6 @@ opacity: 0;
     opacity: 1;
 }
 
-
-.img-1::after, .img-2::after, .img-3::after, .img-4::after, .img-5::after, .img-6::after{
-    content: " ";
-    
-}
-
-.img-1:hover, .img-2:hover, .img-3:hover, .img-4:hover, .img-5:hover, .img-6:hover{
-}
-
 .img-1{
     background: url('../images/article-image-2.jpg') center no-repeat;
     background-size: cover;
@@ -742,8 +731,7 @@ opacity: 0;
     background: var(--color-blue);
     padding: 2rem 0;
     text-align: center;
-    clip-path: polygon(49% 0, 50% 0, 100% 30%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 30%);
-}
+    clip-path: polygon(50% 0, 50% 0, 100% 10%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 10%);}
 
 .img-footer{
     width: 5rem;
@@ -761,6 +749,10 @@ opacity: 0;
 /************->MEDIA QUERIES *********<-*/
 
 @media screen and (max-width:740px){
+    /* .navbar{
+        height: 100vh;
+        background: black;
+    } */
     .carousel-inner{
         height: 100vh;
     }
