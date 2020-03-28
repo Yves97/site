@@ -601,7 +601,36 @@ opacity: 0;
     width: 100%;
     height: 35rem;
     margin-bottom: 2rem;
+    position: relative;
+    padding: 2rem;
+}
 
+.bg-img::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    background: #0b22394d;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--default-transition);
+}
+
+.bg-img:hover::after{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.img-1::after, .img-2::after, .img-3::after, .img-4::after, .img-5::after, .img-6::after{
+    content: " ";
+    
+}
+
+.img-1:hover, .img-2:hover, .img-3:hover, .img-4:hover, .img-5:hover, .img-6:hover{
 }
 
 .img-1{
@@ -612,21 +641,25 @@ opacity: 0;
 .img-2{
     background: url('../images/article-image-1.jpg') center no-repeat;
     background-size: cover;
+    
 }
 
 .img-3{
     background: url('../images/clinic_01.jpg') center no-repeat;
     background-size: cover;
+    
 }
 
 .img-4{
     background: url('../images/hero_1.jpg') center no-repeat;
     background-size: cover;
+    
 }
 
 .img-5{
     background: url('../images/hero_2.jpg') center no-repeat;
     background-size: cover;
+    
 }
 
 .img-6{

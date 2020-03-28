@@ -121,7 +121,7 @@ $(document).ready(function () {
         });
     }
     //-->PARALLAX
-    $('.image').parallax({imageSrc: '/ressources/images/reservation_1.jpg'})
+    // $('.image').parallax({imageSrc: '/ressources/images/reservation_1.jpg'})
 });
 
 
