@@ -328,7 +328,7 @@ ul li{
     }
 }
 
-#about, #skills, #education, #contacts, #portfolio{
+#about, #skills, #education, #contacts, #portfolio, #bye{
     padding: 5rem 0;
     background-color:var(--dark-theme-color) ;
 }
@@ -663,6 +663,23 @@ opacity: 0;
 
 .t-input{
     border: 1px solid var(--white-fade);
+}
+
+#bye{
+    min-height: 100vh;
+}
+
+.see-you-soon{
+    height: 50rem;
+    background: url('../images/undraw_feeling_proud_qne1.svg') center no-repeat;
+    background-size: contain;
+    margin: 2rem auto;
+}
+
+.see-you-soon + h3{
+    color: var(--white-gradient);
+    text-align: center;
+    font-size: 3rem;
 }
 
 .t-input:focus{

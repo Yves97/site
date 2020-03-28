@@ -1,13 +1,12 @@
-
-
-
-
 $(document).ready(function () {
+
+    $('.fa-arrow-circle-up').hide()
     //--> NAVBAR TOGGLER ARROW
     $('.navbar-toggler').click(function(e){
         console.log($('.fa-arrow-down'))
         $('.fa-arrow-down').toggleClass('tg-rotate')
     })
+
     //--> WOW JS
     new WOW().init()
 
@@ -44,6 +43,7 @@ $(document).ready(function () {
         }
 
         //->TIMELINE
+
         /* Check the location of each eleme hidden */
         $('.hidden').each( function(i){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -120,6 +120,8 @@ $(document).ready(function () {
             setWidth();
         });
     }
+    //-->PARALLAX
+    $('.image').parallax({imageSrc: '/ressources/images/reservation_1.jpg'})
 });
 
 
