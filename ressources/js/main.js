@@ -41,11 +41,11 @@ $(document).ready(function () {
         if($(window).scrollTop() > 60 ){
             // console.log($(window).scrollTop())
             $('.navbar').addClass('d-none')
-            $('.carousel-item').addClass('polnone')
+            // $('.carousel-item').addClass('polnone')
         }
         if($(window).scrollTop() < 61 ){
             $('.navbar').removeClass('d-none')
-            $('.carousel-item').removeClass('polnone')
+            // $('.carousel-item').removeClass('polnone')
         }
         if($(window).scrollTop() == 0){
             $('.fa-arrow-circle-up').css({display:'none'})

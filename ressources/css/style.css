@@ -601,25 +601,7 @@ opacity: 0;
     margin-bottom: 2rem;
     position: relative;
     padding: 2rem;
-}
-
-.bg-img::after{
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: 90%;
-    background: #0b22394d;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: var(--default-transition);
-}
-
-.bg-img:hover::after{
-    visibility: visible;
-    opacity: 1;
+    cursor: pointer;
 }
 
 .img-1{
@@ -731,7 +713,6 @@ opacity: 0;
     background: var(--color-blue);
     padding: 2rem 0;
     text-align: center;
-    clip-path: polygon(50% 0, 50% 0, 100% 10%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0% 10%);
 }
 
 .img-footer{
