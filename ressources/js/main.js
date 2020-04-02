@@ -8,9 +8,10 @@ $(document).ready(function () {
     })
 
     //--> TYPED
+    var anotherString = '<span class="span-bg"> MON SITE CV </span>'
     let typed = new Typed('.type',{
         strings: 
-        ['BIENVENU(E) SUR MON SITE CV 2020'],
+        ['BIENVENU(E) SUR' + ' ' + anotherString],
         typeSpeed:100,
         backSpeed:200,
         smartBackspace: true,

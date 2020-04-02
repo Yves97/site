@@ -112,6 +112,11 @@ ul li{
     transform: rotate(180deg);
 }
 
+.span-bg{
+    background: var(--white-gradient);
+    padding: 1rem;
+    color: var(--primary-color);
+}
 /*------------------------------------*/
 
 
