@@ -2,10 +2,10 @@
 
 :root{
     --dark-theme-color:rgb(0, 0, 0);
+    --primary-color: #b80d57;
     --color-white: #fff;
     --color-black: #000;
     --color-blue:#0b2239;
-    --color-green: #57d131;
     --green-gradient: #56bc83;
     --default-transition: all .3s;
     --color-gray: #5e5d5d;
@@ -38,7 +38,7 @@ body{
     width: 100%;
     font-size: 1.6rem;
     position: relative;
-    background-color: var(--dark-theme-color)   ;
+    background-color: var(--dark-theme-color);
     transition: var(--default-transition);
 }
 
@@ -56,7 +56,7 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-thumb{
-    background-color: var(--color-green);
+    background-color: var(--primary-color);
 }
 
 body::-webkit-scrollbar-thumb:hover{
@@ -166,7 +166,7 @@ ul li{
 }
 
 .nav-link:hover{
-    color: var(--color-green);
+    color: var(--primary-color);
 }
 
 #mycarousel{
@@ -209,7 +209,7 @@ ul li{
 }
 
 #pg::-webkit-progress-value {
-	background-color: var(--color-green);
+	background-color: var(--primary-color);
 	z-index: 10;
 }
 
@@ -225,7 +225,7 @@ ul li{
 }
 
 .progress-bar {
-	background-color: var(--color-green);
+	background-color: var(--primary-color);
 	width: 0%;
 	display: block;
 	height: inherit;
@@ -290,8 +290,8 @@ ul li{
     left: 50%;
     width: 2.4rem;
     height: 2.4rem;
-    border-left: 3px solid var(--color-green);
-    border-bottom: 3px solid var(--color-green);
+    border-left: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg),translate(-50%,-4rem);
     -webkit-animation: yv-effect 1.5s infinite;
@@ -352,7 +352,7 @@ ul li{
     width: 50%;
     height: 1.5rem;
     z-index: -2;
-    background: var(--color-green) !important;
+    background: var(--primary-color) !important;
     transition: var(--default-transition);
 }
 
@@ -415,7 +415,7 @@ ul li{
     top: 0;
     left: 0;
     height: 100%;
-    background: var(--color-green);
+    background: var(--primary-color);
     z-index: -1;
     width: 50%;
     transition: var(--default-transition);
@@ -424,9 +424,9 @@ ul li{
 .btn-download:hover::after{
     width: 100%;
     background: transparent;
-    border-top: 1px solid var(--color-green);
-    border-bottom: 1px solid var(--color-green);
-    border-right: 1px solid var(--color-green);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
 }
 
 .btn-download:hover{
@@ -479,7 +479,7 @@ ul li{
 }
 
 .timeline ul li {
-    background: var(--color-green);
+    background: var(--primary-color);
     position: relative;
     margin: 0 auto;
     width: .5rem;
@@ -500,7 +500,7 @@ ul li{
     -webkit-transform: translateX(-50%);
     width: 20px;
     height: 20px;
-    border: 3px solid var(--color-green);
+    border: 3px solid var(--primary-color);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -511,7 +511,7 @@ opacity: 0;
 }
 
 .timeline ul li .content {
-    background: var(--color-green);
+    background: var(--primary-color);
     position: relative;
     top: 7px;
     width: 45rem;
@@ -541,7 +541,7 @@ opacity: 0;
 
 .timeline ul li .content:before {
     content: "";
-    background: var(--color-green);
+    background: var(--primary-color);
     position: absolute;
     top: 0px;
     width: 3.8rem;
@@ -550,9 +550,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(odd) .content {
     left: 5rem;
-    background: var(--color-green);
-    background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--color-green));
-    background: linear-gradient(-45deg, var(--green-gradient), var(--color-green));
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--primary-color));
+    background: linear-gradient(-45deg, var(--green-gradient), var(--primary-color));
 }
 
 .timeline ul li:nth-child(odd) .content:before {
@@ -561,9 +561,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(even) .content {
     left: calc(-45rem - 4.5rem);
-    background: var(--color-green);
-    background: -webkit-linear-gradient(45deg, var(--green-gradient), var(--color-green));
-    background: linear-gradient(45deg, var(--green-gradient), var(--color-green));
+    background: var(--primary-color);
+    background: -webkit-linear-gradient(45deg, var(--green-gradient), var(--primary-color));
+    background: linear-gradient(45deg, var(--green-gradient), var(--primary-color));
 }
 
 .timeline ul li:nth-child(even) .content:before {
@@ -662,7 +662,7 @@ opacity: 0;
 }
 
 .y-input:focus{
-    border-bottom: 1px solid var(--color-green);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .t-input{
@@ -687,7 +687,7 @@ opacity: 0;
 }
 
 .t-input:focus{
-    border: 1px solid var(--color-green);
+    border: 1px solid var(--primary-color);
 }
 
 .fa-arrow-circle-up{
@@ -695,7 +695,7 @@ opacity: 0;
     position: fixed;
     bottom: 4rem;
     right: 2rem;
-    color: var(--color-green);
+    color: var(--primary-color);
     cursor: pointer;
     transition: var(--default-transition);
     z-index: 2000;
@@ -778,9 +778,9 @@ opacity: 0;
     }
     .timeline ul li:nth-child(even) .content {
         left: 4.5rem;
-        background: var(--color-green);
-        background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--color-green));
-        background: linear-gradient(-45deg, var(--green-gradient), var(--color-green));
+        background: var(--primary-color);
+        background: -webkit-linear-gradient(-45deg, var(--green-gradient), var(--primary-color));
+        background: linear-gradient(-45deg, var(--green-gradient), var(--primary-color));
     }
     .timeline ul li:nth-child(even) .content:before {
         left: -3.3rem;
