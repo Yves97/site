@@ -165,12 +165,13 @@ ul li{
 }
 
 .nav-link{
-    color: var(--color-white);
+    color: var(--white-gradient);
     transition: var(--default-transition);
 }
 
 .nav-link:hover{
-    color: var(--primary-color);
+    color: var(--white-gradient);
+    text-shadow: 10px -7px 2px var(--primary-color);
 }
 
 #mycarousel{
