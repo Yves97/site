@@ -87,7 +87,7 @@ ul li{
     display: none;
 }
 
-#loader  img{
+#loader img{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,7 +97,7 @@ ul li{
 /***********************************/
 
 
-/************->JS Class*********<-*/
+/************->JS Classes*********<-*/
 
 .d-none{
     display: none;
@@ -113,7 +113,7 @@ ul li{
 }
 
 .span-bg{
-    background: var(--white-gradient);
+    background: var(--color-white);
     padding: 1rem;
     color: var(--primary-color);
 }
@@ -138,16 +138,16 @@ ul li{
 }
 
 .navbar-brand{
-    color: var(--white-gradient) !important;
+    color: var(--color-white) !important;
     font-size: 2rem;
 }
 
 .navbar-toggler{
-    border: 1px solid var(--white-gradient);
+    border: 1px solid var(--color-white);
 }
 
 .fa-arrow-down{
-    color: var(--white-gradient);
+    color: var(--color-white);
     transition: var(--default-transition);
 }
 
@@ -165,12 +165,12 @@ ul li{
 }
 
 .nav-link{
-    color: var(--white-gradient);
+    color: var(--color-white);
     transition: var(--default-transition);
 }
 
 .nav-link:hover{
-    color: var(--white-gradient);
+    color: var(--color-white);
     text-shadow: 10px -7px 2px var(--primary-color);
 }
 
@@ -186,7 +186,7 @@ ul li{
 }
 
 ::-webkit-scrollbar {
-	display: none;
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -244,7 +244,7 @@ ul li{
 }
 
 .welcome-message{
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 .content-message{
@@ -344,7 +344,7 @@ ul li{
     font-size: 5rem;
     position: relative;
     cursor: default;
-    color: var(--white-gradient);
+    color: var(--color-white);
     margin-bottom: 10rem;
     z-index: 3;
     display: inline-block;
@@ -376,7 +376,7 @@ ul li{
     align-items: center;
     padding: 1rem;
     margin-bottom: 2rem;
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 .info-text h4{
@@ -410,7 +410,7 @@ ul li{
     margin-top: 2rem;
     cursor: pointer;
     background: transparent;
-    color: var(--white-gradient);
+    color: var(--color-white);
     transition: var(--default-transition);
 }
 
@@ -435,7 +435,7 @@ ul li{
 }
 
 .btn-download:hover{
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 .skills{
@@ -444,7 +444,7 @@ ul li{
 
 .skills p{
     margin-bottom: 0;
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 .skills p img{
@@ -465,7 +465,7 @@ ul li{
 }
 
 .skills progress[value]::-webkit-progress-value{
-    background-color: var(--white-gradient);
+    background-color: var(--color-white);
 }
 
 .box-timeline{
@@ -484,7 +484,7 @@ ul li{
 }
 
 .timeline ul li {
-    background: var(--white-gradient);
+    background: var(--color-white);
     position: relative;
     margin: 0 auto;
     width: .5rem;
@@ -497,7 +497,7 @@ ul li{
 
 .timeline ul li:before {
     content: "";
-    background: var(--white-gradient);
+    background: var(--color-white);
     position: absolute;
     left: 50%;
     top: 0;
@@ -505,7 +505,7 @@ ul li{
     -webkit-transform: translateX(-50%);
     width: 20px;
     height: 20px;
-    border: 3px solid var(--white-gradient);
+    border: 3px solid var(--color-white);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -516,7 +516,7 @@ opacity: 0;
 }
 
 .timeline ul li .content {
-    background: var(--white-gradient);
+    background: var(--color-white);
     position: relative;
     top: 7px;
     width: 45rem;
@@ -524,14 +524,14 @@ opacity: 0;
 }
 
 .timeline ul li .content h2 {
-    color: var(--white-gradient);
+    color: var(--color-white);
     padding-bottom: 1rem;
     color: var(--color-black);
 }
 
 .timeline ul li .content h4{
     font-size: 2rem !important;
-    color: var(--white-gradient);
+    color: var(--color-white);
     margin-bottom: 2rem;
 }
 
@@ -546,7 +546,7 @@ opacity: 0;
 
 .timeline ul li .content:before {
     content: "";
-    background: var(--white-gradient);
+    background: var(--color-white);
     position: absolute;
     top: 0px;
     width: 3.8rem;
@@ -555,9 +555,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(odd) .content {
     left: 5rem;
-    background: var(--white-gradient);
-    background: -webkit-linear-gradient(-45deg, var(--primary-color), var(--white-gradient));
-    background: linear-gradient(-45deg, var(--primary-color), var(--white-gradient));
+    background: var(--color-white);
+    background: -webkit-linear-gradient(-45deg, var(--primary-color), var(--color-white));
+    background: linear-gradient(-45deg, var(--primary-color), var(--color-white));
 }
 
 .timeline ul li:nth-child(odd) .content:before {
@@ -566,9 +566,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(even) .content {
     left: calc(-45rem - 4.5rem);
-    background: var(--white-gradient);
-    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--white-gradient));
-    background: linear-gradient(45deg, var(--primary-color), var(--white-gradient));
+    background: var(--color-white);
+    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--color-white));
+    background: linear-gradient(45deg, var(--primary-color), var(--color-white));
 }
 
 .timeline ul li:nth-child(even) .content:before {
@@ -595,7 +595,7 @@ opacity: 0;
 }
 
 .portfolio-menu button.active , .portfolio-menu button:hover{
-    color: var(--white-gradient);
+    color: var(--color-white);
     background: var(--primary-color);
     outline: none;
 }
@@ -649,7 +649,7 @@ opacity: 0;
 }
 
 .y-input , .t-input{
-    color: var(--white-gradient);
+    color: var(--color-white);
     display: block;
     background: transparent;
     margin-bottom: 2rem;
@@ -663,7 +663,7 @@ opacity: 0;
 }
 
 .y-input::placeholder, .t-input::placeholder{
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 .y-input:focus{
@@ -686,7 +686,7 @@ opacity: 0;
 }
 
 .see-you-soon + h3{
-    color: var(--white-gradient);
+    color: var(--color-white);
     text-align: center;
     font-size: 3rem;
 }
@@ -707,7 +707,7 @@ opacity: 0;
 }
 
 .fa-arrow-circle-up:hover{
-    color: var(--white-gradient);
+    color: var(--color-white);
 }
 
 #footer{
@@ -715,7 +715,7 @@ opacity: 0;
     bottom: 0;
     width: 100%;
     z-index:-1;
-    background: var(--white-gradient);
+    background: var(--color-white);
     padding: 2rem 0;
     text-align: center;
 }
@@ -784,8 +784,8 @@ opacity: 0;
     .timeline ul li:nth-child(even) .content {
         left: 4.5rem;
         background: var(--primary-color);
-        background: -webkit-linear-gradient(-45deg, var(--white-gradient), var(--primary-color));
-        background: linear-gradient(-45deg, var(--white-gradient), var(--primary-color));
+        background: -webkit-linear-gradient(-45deg, var(--color-white), var(--primary-color));
+        background: linear-gradient(-45deg, var(--color-white), var(--primary-color));
     }
     .timeline ul li:nth-child(even) .content:before {
         left: -3.3rem;
