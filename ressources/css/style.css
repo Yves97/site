@@ -766,36 +766,36 @@ opacity: 0;
 }
 
 .img-1{
-    background: url('../images/article-image-2.jpg') center no-repeat;
+    background: url('../images/nat2.jpg') center no-repeat;
     background-size: cover;
 }
 
 .img-2{
-    background: url('../images/article-image-1.jpg') center no-repeat;
+    background: url('../images/auto3.jpg') center no-repeat;
     background-size: cover;
     
 }
 
 .img-3{
-    background: url('../images/clinic_01.jpg') center no-repeat;
+    background: url('../images/house1.jpg') center no-repeat;
     background-size: cover;
     
 }
 
 .img-4{
-    background: url('../images/hero_1.jpg') center no-repeat;
+    background: url('../images/auto2.jpg') center no-repeat;
     background-size: cover;
     
 }
 
 .img-5{
-    background: url('../images/hero_2.jpg') center no-repeat;
+    background: url('../images/house2.jpg') center no-repeat;
     background-size: cover;
     
 }
 
 .img-6{
-    background: url('../images/reservation_1.jpg') center no-repeat;
+    background: url('../images/nat1.jpg') center no-repeat;
     background-size: cover;
 }
 
@@ -852,7 +852,7 @@ opacity: 0;
     border: 1px solid var(--primary-color);
 }
 
-.fa-arrow-circle-up{
+.fa-arrow-circle-o-up{
     font-size: 4rem;
     position: fixed;
     bottom: 4rem;

@@ -3,8 +3,8 @@ $(document).ready(function () {
     $('.fa-arrow-circle-up').hide()
     //--> NAVBAR TOGGLER ARROW
     $('.navbar-toggler').click(function(e){
-        // console.log($('.fa-arrow-down'))
-        $('.fa-arrow-down').toggleClass('tg-rotate')
+        // console.log($('.fa fa-arrow-down'))
+        $('.fa fa-arrow-down').toggleClass('tg-rotate')
     })
 
     //--> TYPED
@@ -49,10 +49,10 @@ $(document).ready(function () {
             // $('.carousel-item').removeClass('polnone')
         }
         if($(window).scrollTop() == 0){
-            $('.fa-arrow-circle-up').css({display:'none'})
+            $('.fa-arrow-circle-o-up').css({display:'none'})
         }
         if($(window).scrollTop() != 0){
-            $('.fa-arrow-circle-up').css({display:'block'})
+            $('.fa-arrow-circle-o-up').css({display:'block'})
         }
 
         //->TIMELINE
@@ -133,8 +133,6 @@ $(document).ready(function () {
             setWidth();
         });
     }
-    //-->PARALLAX
-    // $('.image').parallax({imageSrc: '/ressources/images/reservation_1.jpg'})
 });
 
 
