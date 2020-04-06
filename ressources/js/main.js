@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('.fa-arrow-circle-up').hide()
     //--> NAVBAR TOGGLER ARROW
     $('.navbar-toggler').click(function(e){
-        // console.log($('.fa fa-arrow-down'))
         $('.fa fa-arrow-down').toggleClass('tg-rotate')
     })
 
@@ -25,7 +24,6 @@ $(document).ready(function () {
 
     //--> SPLITTING JS
     Splitting();
-    // console.log('zêfpl')
 
     //-->TIMELINE
     /* Check the location of each element */
@@ -40,13 +38,10 @@ $(document).ready(function () {
     //--> Listening Scroll Event
     $(window).scroll(function(){
         if($(window).scrollTop() > 60 ){
-            // console.log($(window).scrollTop())
             $('.navbar').addClass('d-none')
-            // $('.carousel-item').addClass('polnone')
         }
         if($(window).scrollTop() < 61 ){
             $('.navbar').removeClass('d-none')
-            // $('.carousel-item').removeClass('polnone')
         }
         if($(window).scrollTop() == 0){
             $('.fa-arrow-circle-o-up').css({display:'none'})

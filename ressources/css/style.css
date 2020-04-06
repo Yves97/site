@@ -2,21 +2,20 @@
 
 :root{
     --dark-theme-color:rgb(0, 0, 0);
-    --primary-color: #b80d57;
+    --primary-color: #ff1e56;
     --color-white: #fff;
     --color-black: #000;
-    --color-blue:#0b2239;
     --default-transition: all .3s;
     --color-gray: #5e5d5d;
     --white-fade:#e7e7e7;
     --white-gradient:#fafafa;
-    --arrow-color: aquamarine;
 }
 
 /*------------------------------------*/
 
 
 /************->FONTS*********<-*/
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Cinzel+Decorative|Dancing+Script|Gotu|Great+Vibes|IM+Fell+French+Canon+SC|Indie+Flower|Monoton|Orbitron|Pacifico|Press+Start+2P|Sen&display=swap');
 /*------------------------------------*/
 
 /************->GENERAL*********<-*/
@@ -33,6 +32,16 @@ html{
 }
 
 body{
+    /* font-family: 'Cinzel Decorative', cursive; */
+    /* font-family: 'Gotu', sans-serif; */
+    /* font-family: 'Sen', sans-serif; */
+    font-family: 'IM Fell French Canon SC', serif;
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Great Vibes', cursive; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'Monoton', cursive; */
+    /* font-family: 'Audiowide', cursive; */
     box-sizing: border-box;
     width: 100%;
     font-size: 1.6rem;
@@ -260,10 +269,6 @@ ul li{
     transition: all .4s;
 }
 
-.polnone{
-    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-}
-
 .tg-rotate{
     transform: rotate(180deg);
 }
@@ -274,6 +279,7 @@ ul li{
     padding: 1rem;
     color: var(--primary-color);
 }
+
 /*------------------------------------*/
 
 
@@ -281,7 +287,6 @@ ul li{
 
 #header{
     background-color: var(--dark-theme-color);
-    /* z-index: 2000; */
     min-height: 100vh;
     position: relative;
 
@@ -290,8 +295,6 @@ ul li{
 .navbar{
     background: transparent;
     padding: 1rem;
-    transition: all .3s !important;
-    /* display: inline-block; */
 }
 
 .navbar-brand{
@@ -333,7 +336,6 @@ ul li{
 
 #mycarousel{
     position: relative;
-    /* z-index: 700; */
     transition: all .3s;
 }
 
@@ -361,7 +363,6 @@ ul li{
 	appearance: none;
 	border: none;
 	background-color: transparent;
-	/* color: #D4AF37; */
 	z-index: 10;
 }
 
@@ -545,7 +546,6 @@ ul li{
     margin-bottom:3rem;
 }
 
-
 .info-text p{
     width: 70%;
 }
@@ -616,8 +616,8 @@ ul li{
 }
 
 .skills progress[value]::-webkit-progress-bar{
-    background-color: var(--color-black);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.027) inset;
+    background: var(--color-black);
+    border:1px solid var(--color-white) !important;
 }
 
 .skills progress[value]::-webkit-progress-value{
@@ -773,25 +773,21 @@ opacity: 0;
 .img-2{
     background: url('../images/auto3.jpg') center no-repeat;
     background-size: cover;
-    
 }
 
 .img-3{
     background: url('../images/house1.jpg') center no-repeat;
     background-size: cover;
-    
 }
 
 .img-4{
     background: url('../images/auto2.jpg') center no-repeat;
     background-size: cover;
-    
 }
 
 .img-5{
     background: url('../images/house2.jpg') center no-repeat;
     background-size: cover;
-    
 }
 
 .img-6{
@@ -893,10 +889,6 @@ opacity: 0;
 /************->MEDIA QUERIES *********<-*/
 
 @media screen and (max-width:740px){
-    /* .navbar{
-        height: 100vh;
-        background: black;
-    } */
     .carousel-inner{
         height: 100vh;
     }
@@ -915,7 +907,6 @@ opacity: 0;
     .portfolio-menu{
         justify-content: flex-start;
     }
-    
 }
 
 @media screen and (max-width: 1020px) {
