@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     $('.fa-arrow-circle-up').hide()
-    //--> NAVBAR TOGGLER ARROW
+    //--> NAVBAR TOGGLER ARROW-DOWN
     $('.navbar-toggler').click(function(e){
-        $('.fa fa-arrow-down').toggleClass('tg-rotate')
+        $('.fa-arrow-down').toggleClass('tg-rotate')
     })
 
     //--> TYPED

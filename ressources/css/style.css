@@ -766,33 +766,43 @@ opacity: 0;
 }
 
 .img-1{
-    background: url('../images/nat2.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/python.svg') center no-repeat;
+    background-size: contain;
 }
 
 .img-2{
-    background: url('../images/auto3.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/css.svg') center no-repeat;
+    background-size: contain;
 }
 
 .img-3{
-    background: url('../images/house1.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/sql.svg') center no-repeat;
+    background-size: contain;
 }
 
 .img-4{
-    background: url('../images/auto2.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/html-5.svg') center no-repeat;
+    background-size: contain;
 }
 
 .img-5{
-    background: url('../images/house2.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/flutter-logo.svg') center no-repeat;
+    background-size: contain;
 }
 
 .img-6{
-    background: url('../images/nat1.jpg') center no-repeat;
-    background-size: cover;
+    background: url('../images/php.svg') center no-repeat;
+    background-size: contain;
+}
+
+.img-7{
+    background: url('../images/js.svg') center no-repeat;
+    background-size: contain;
+}
+
+.img-8{
+    background: url('../images/vue-js-1.svg') center no-repeat;
+    background-size: contain;
 }
 
 .box-form{
