@@ -6,6 +6,9 @@
 @import 'partials/mixins';
 /*------------------------------------*/
 
+/************->KEYFRAMES<-*********<-*/
+@import 'partials/keyframes';
+/*------------------------------------*/
 
 /************->FONTS*********<-*/
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Cinzel+Decorative|Dancing+Script|Gotu|Great+Vibes|IM+Fell+French+Canon+SC|Indie+Flower|Monoton|Orbitron|Pacifico|Press+Start+2P|Sen&display=swap');
@@ -13,17 +16,7 @@
 
 /************->GENERAL*********<-*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
-
+@include reset;
 body{
     font-family: 'IM Fell French Canon SC', serif;
     box-sizing: border-box;
@@ -33,13 +26,6 @@ body{
     background-color: $dark-theme-color;
     transition: $defalut-transition;
 }
-
-a,a:hover{
-    text-decoration: none;
-    color: $color-black;
-}
-
-ul li{list-style: none;}
 
 /*------------------------------------*/
 
@@ -53,9 +39,7 @@ ul li{list-style: none;}
     text-align: center;
 }
 
-#loader.hidden{
-    display: none;
-}
+#loader.hidden{display: none;}
 
 .load {
     color: $color-white;
@@ -66,398 +50,83 @@ ul li{list-style: none;}
     transform: translate(-50%,-50%);
 }
 
-@keyframes noise-anim {
-    0% {
-        clip-path: inset(5% 0 49% 0);
-    }
-    5% {
-        clip-path: inset(43% 0 50% 0);
-    }
-    10% {
-        clip-path: inset(87% 0 4% 0);
-    }
-    15% {
-        clip-path: inset(4% 0 21% 0);
-    }
-    20% {
-        clip-path: inset(63% 0 12% 0);
-    }
-    25% {
-        clip-path: inset(17% 0 78% 0);
-    }
-    30% {
-        clip-path: inset(89% 0 8% 0);
-    }
-    35% {
-        clip-path: inset(95% 0 3% 0);
-    }
-    40% {
-        clip-path: inset(7% 0 15% 0);
-    }
-    45% {
-        clip-path: inset(3% 0 86% 0);
-    }
-    50% {
-        clip-path: inset(57% 0 2% 0);
-    }
-    55% {
-        clip-path: inset(11% 0 32% 0);
-    }
-    60% {
-        clip-path: inset(74% 0 22% 0);
-    }
-    65% {
-        clip-path: inset(17% 0 70% 0);
-    }
-    70% {
-        clip-path: inset(15% 0 71% 0);
-    }
-    75% {
-        clip-path: inset(98% 0 2% 0);
-    }
-    80% {
-        clip-path: inset(27% 0 19% 0);
-    }
-    85% {
-        clip-path: inset(66% 0 18% 0);
-    }
-    90% {
-        clip-path: inset(59% 0 14% 0);
-    }
-    95% {
-        clip-path: inset(44% 0 53% 0);
-    }
-    100% {
-        clip-path: inset(66% 0 24% 0);
+.load,
+.txt,
+.txt2,
+.span-bg{
+    &::after{
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 $primary-color;
+        top: 0;
+        color:  $color-white;
+        overflow: hidden;
+        @include animate(noise-anim 2s infinite linear alternate-reverse);
     }
 }
 
-.load::after,.txt::after ,.txt2::after,.span-bg::after{
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -1px 0 $primary-color;
-    top: 0;
-    color:  $color-white;
-    overflow: hidden;
-    animation: noise-anim 2s infinite linear alternate-reverse;
-}
-
-@keyframes noise-anim-2 {
-    0% {
-        clip-path: inset(61% 0 30% 0);
+.load,
+.txt,
+.txt2,
+.span-bg{
+    &::before{
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 $primary-color;
+        top: 0;
+        color: $primary-color;
+        overflow: hidden;
+        @include animate(noise-anim 15s infinite linear alternate-reverse);
     }
-    5% {
-        clip-path: inset(27% 0 25% 0);
-    }
-    10% {
-        clip-path: inset(72% 0 19% 0);
-    }
-    15% {
-        clip-path: inset(24% 0 76% 0);
-    }
-    20% {
-        clip-path: inset(9% 0 40% 0);
-    }
-    25% {
-        clip-path: inset(91% 0 3% 0);
-    }
-    30% {
-        clip-path: inset(1% 0 70% 0);
-    }
-    35% {
-        clip-path: inset(31% 0 37% 0);
-    }
-    40% {
-        clip-path: inset(100% 0 1% 0);
-    }
-    45% {
-        clip-path: inset(5% 0 94% 0);
-    }
-    50% {
-        clip-path: inset(93% 0 5% 0);
-    }
-    55% {
-        clip-path: inset(74% 0 4% 0);
-    }
-    60% {
-        clip-path: inset(55% 0 9% 0);
-    }
-    65% {
-        clip-path: inset(75% 0 20% 0);
-    }
-    70% {
-        clip-path: inset(69% 0 25% 0);
-    }
-    75% {
-        clip-path: inset(19% 0 22% 0);
-    }
-    80% {
-        clip-path: inset(4% 0 88% 0);
-    }
-    85% {
-        clip-path: inset(30% 0 52% 0);
-    }
-    90% {
-        clip-path: inset(29% 0 23% 0);
-    }
-    95% {
-        clip-path: inset(62% 0 1% 0);
-    }
-    100% {
-        clip-path: inset(14% 0 70% 0);
-    }
-}
-
-.load::before,.txt::before,.txt2::before,.span-bg::before{
-    content: attr(data-text);
-    position: absolute;
-    left: -2px;
-    text-shadow: 1px 0 $primary-color;
-    top: 0;
-    color: $primary-color;
-    overflow: hidden;
-    animation: noise-anim-2 15s infinite linear alternate-reverse;
 }
 
 /***********************************/
 
 
 /************->JS Classes*********<-*/
-
-.d-none{
-    display: none;
-    transition: all .4s;
-}
-
-.tg-rotate{
-    transform: rotate(180deg);
-}
-
-.span-bg{
-    position: relative;
-    background:  $color-white;
-    padding: 1rem;
-    color: $primary-color;
-}
-
+@include javascriptClasses;
 /*------------------------------------*/
 
 
-/************->ONE PAGE INDEX *********<-*/
 
-#header{
-    background-color: $dark-theme-color;
-    min-height: 100vh;
-    position: relative;
+/************->HEADER*********<-*/
+@import 'partials/header';
+/*------------------------------------*/
 
-}
+/************->MAIN *********<-*/
 
-.navbar{
-    background: transparent;
-    padding: 1rem;
-}
+.test .char{@include animate(animate 2s ease-in-out infinite);}
 
-.navbar-brand{
-    color:  $color-white !important;
-    font-size: 2rem;
-}
+.titles .char{@include animate(anime  2s ease-in-out infinite);}
 
-.navbar-toggler{
-    border: 1px solid  $color-white;
-}
-
-.fa-arrow-down{
-    color:  $color-white;
-    transition: $defalut-transition;
-}
-
-#my-nav{
-    justify-content: center!important;
-}
-
-.navbar-nav{
-    justify-content: center;
-}
-
-.nav-item{
-    margin-right: 2rem;
-    font-size: 1.8rem;
-}
-
-.nav-link{
-    color:  $color-white;
-    transition: $defalut-transition;
-}
-
-.nav-link:hover{
-    color:  $color-white;
-    text-shadow: 10px -7px 2px $primary-color;
-}
-
-#mycarousel{
-    position: relative;
-    transition: all .3s;
-}
-
-.carousel-inner, .carousel-item{
-    height: 100vh;
-    transition: all .3s;
-}
-
-#pg {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: .5rem;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: none;
-	background-color: transparent;
-	z-index: 10;
-}
-
-#pg::-webkit-progress-bar {
-	background-color: transparent;
-	z-index: 10;
-}
-
-#pg::-webkit-progress-value {
-	background-color: $primary-color;
-	z-index: 10;
-}
-
-.progress-container {
-	width: 100%;
-	background-color: transparent;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 5px;
-	display: block;
-	z-index: 10;
-}
-
-.progress-bar {
-	background-color: $primary-color;
-	width: 0%;
-	display: block;
-	height: inherit;
-	z-index: 10;
-}
-
-.main-message{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.welcome-message{
-    color:  $color-white;
-}
-
-.content-message{
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.content-message h5{
-    font-style: italic;
-}
-
-.content-message span{
-    font-size: 2.5rem;
-    font-size: 5rem;
-}
-
-.test .char{
-    animation: animate 2s ease-in-out infinite;
-}
-
-@keyframes animate{
-    0%,100%{
-        transform: translateY(-1rem) rotate(-25deg);
-    }
-    50%{
-        transform: translateY(1rem) rotate(25deg);
-    }
-}
-
-.titles .char{
-    animation : anime 2s ease-in-out infinite;
-}
-
-@keyframes anime{
-    0%,100%{
-        transform: translateX(.5rem) ;
-    }
-    50%{
-        transform : translateX(-.5rem) 
-    }
-}
-
-#scroll-invitation a span {
-    z-index: 2000;
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    width: 2.4rem;
-    height: 2.4rem;
-    border-left: 3px solid $primary-color;
-    border-bottom: 3px solid $primary-color;
-    -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg),translate(-50%,-4rem);
-    -webkit-animation: yv-effect 1.5s infinite;
-    animation: yv-effect 1.5s infinite;
-}
-
-
-@-webkit-keyframes yv-effect {
-    0% {
-        -webkit-transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
-}
-@keyframes yv-effect {
-    0% {
-        transform: rotateY(0) rotateZ(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotateY(720deg) rotateZ(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
-}
-
-#about, #skills, #education, #contacts, #portfolio, #bye{
+#about, 
+#skills, 
+#education, 
+#contacts, 
+#portfolio,
+#bye{
     padding: 5rem 0;
     background-color:$dark-theme-color ;
 }
 
-.box-content-info{
-    padding: 1rem;
-}
+.box-content-info{padding: 1rem;}
 
-.box-content-info > h3, #skills h3, #education h3, #portfolio h3, #contacts h3{
-    font-size: 5rem;
-    position: relative;
-    cursor: default;
-    color:  $color-white;
-    margin-bottom: 10rem;
-    z-index: 3;
-    display: inline-block;
+.box-content-info,
+#skills, 
+#education, 
+#portfolio, 
+#contacts{
+    h3{
+        font-size: 5rem;
+        position: relative;
+        cursor: default;
+        color:  $color-white;
+        margin-bottom: 10rem;
+        z-index: 3;
+        display: inline-block;
+    }
 }
 
 .box-content-info > h3::before, #skills h3::before, #education h3::before, #portfolio h3::before ,#contacts h3::before{
@@ -510,22 +179,19 @@ ul li{list-style: none;}
     box-shadow: 8px 5px 8px -1px rgb(37, 37, 37);
 }
 
-.btn-download{
-    @include custom-button;
-}
+.btn-download{@include custom-button;}
+
+.skills{margin-bottom: 3rem;}
+
+.skills p{margin-bottom: 0;color:  $color-white;}
 
 .skills{
-    margin-bottom: 3rem;
-}
-
-.skills p{
-    margin-bottom: 0;
-    color:  $color-white;
-}
-
-.skills p img{
-    height: 3rem;
-    width: 3rem;
+    p{
+        img{
+            height: 3rem;
+        width: 3rem;
+        }
+    }
 }
 
 .skills progress[value]{
@@ -744,21 +410,13 @@ opacity: 0;
     transition: $defalut-transition;
 }
 
-.y-input::placeholder, .t-input::placeholder{
-    color:  $color-white;
-}
+.y-input::placeholder, .t-input::placeholder{color:  $color-white;}
 
-.y-input:focus{
-    border-bottom: 1px solid $primary-color;
-}
+.y-input:focus{border-bottom: 1px solid $primary-color;}
 
-.t-input{
-    border: 1px solid $white-fade;
-}
+.t-input{border: 1px solid $white-fade;}
 
-#bye{
-    min-height: 100vh;
-}
+#bye{min-height: 100vh;}
 
 .see-you-soon{
     height: 50rem;
@@ -789,84 +447,13 @@ opacity: 0;
     z-index: 2000;
 }
 
-.fa-arrow-circle-up:hover{
-    color:  $color-white;
-}
-
-#footer{
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    z-index:-1;
-    background:  $color-white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.img-footer{
-    width: 5rem;
-    height: 5rem;
-    margin-right: 2rem;
-}
-
-#footer p{
-    color: $primary-color;
-    margin-top: 2rem;
-}
+.fa-arrow-circle-up:hover{color:  $color-white;}
 /*------------------------------------*/
 
+/************->FOOTER<-*********<-*/
+@import 'partials/footer';
+/*------------------------------------*/
 
 /************->MEDIA QUERIES *********<-*/
-
-@media screen and (max-width:740px){
-    .carousel-inner{
-        height: 100vh;
-    }
-    .box-info, .info-img{
-        display: block;
-    }
-    .box-form{
-        padding: 0;
-    }
-    .content-message{
-        width: unset;
-    }
-    .info-text p{
-        width: 100%;
-    }
-    .portfolio-menu{
-        justify-content: flex-start;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .timeline ul li .content {
-        width: 41vw;
-    }
-
-    .timeline ul li:nth-child(even) .content {
-        left: calc(-41vw - 4.5rem);
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .timeline ul li {
-        margin-left: 2rem;
-    }
-    .timeline ul li .content {
-        width: calc(100vw - 100px);
-    }
-    .timeline ul li .content h2 {
-        text-align: initial;
-    }
-    .timeline ul li:nth-child(even) .content {
-        left: 4.5rem;
-        background: $primary-color;
-        background: -webkit-linear-gradient(-45deg,  $color-white, $primary-color);
-        background: linear-gradient(-45deg,  $color-white, $primary-color);
-    }
-    .timeline ul li:nth-child(even) .content:before {
-        left: -3.3rem;
-    }
-}
+@import 'partials/mediaQueries';
 /*------------------------------------*/

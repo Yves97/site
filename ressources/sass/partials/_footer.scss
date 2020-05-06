@@ -1,0 +1,22 @@
+#footer{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index:-1;
+    background:  $color-white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.img-footer{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+#footer{
+    p{
+        color: $primary-color;
+        margin-top: 2rem;
+    }
+}
