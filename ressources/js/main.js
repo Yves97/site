@@ -44,10 +44,10 @@ $(document).ready(function () {
             $('.navbar').removeClass('d-none')
         }
         if($(window).scrollTop() == 0){
-            $('.fa-arrow-circle-o-up').css({display:'none'})
+            $('.fa-arrow-circle-o-up').fadeOut()
         }
         if($(window).scrollTop() != 0){
-            $('.fa-arrow-circle-o-up').css({display:'block'})
+            $('.fa-arrow-circle-o-up').fadeIn()
         }
 
         //->TIMELINE
