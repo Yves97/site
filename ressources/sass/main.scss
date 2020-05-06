@@ -1,16 +1,9 @@
 /************->VARIABLES*********<-*/
+@import 'partials/variables';
+/*------------------------------------*/
 
-:root{
-    --dark-theme-color:rgb(0, 0, 0);
-    --primary-color: #ff1e56;
-    --color-white: #fff;
-    --color-black: #000;
-    --default-transition: all .3s;
-    --color-gray: #5e5d5d;
-    --white-fade:#e7e7e7;
-    --white-gradient:#fafafa;
-}
-
+/************->MIXINS*********<-*/
+@import 'partials/mixins';
 /*------------------------------------*/
 
 
@@ -32,53 +25,21 @@ html{
 }
 
 body{
-    /* font-family: 'Cinzel Decorative', cursive; */
-    /* font-family: 'Gotu', sans-serif; */
-    /* font-family: 'Sen', sans-serif; */
     font-family: 'IM Fell French Canon SC', serif;
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-family: 'Great Vibes', cursive; */
-    /* font-family: 'Orbitron', sans-serif; */
-    /* font-family: 'Press Start 2P', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Audiowide', cursive; */
     box-sizing: border-box;
     width: 100%;
     font-size: 1.6rem;
     position: relative;
-    background-color: var(--dark-theme-color);
-    transition: var(--default-transition);
-}
-
-body::-webkit-scrollbar-track{
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -o-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -moz-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: transparent;
-}
-
-body::-webkit-scrollbar{
-	width: 1rem;
-	background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color: var(--primary-color);
-}
-
-body::-webkit-scrollbar-thumb:hover{
-    background-color: var(--color-blue);
+    background-color: $dark-theme-color;
+    transition: $defalut-transition;
 }
 
 a,a:hover{
     text-decoration: none;
-    color: var(--color-black);
+    color: $color-black;
 }
 
-ul li{
-    list-style: none;
-}
+ul li{list-style: none;}
 
 /*------------------------------------*/
 
@@ -86,7 +47,7 @@ ul li{
 #loader{
     width : 100%;
     height: 100%;
-    background-color: var(--color-black);
+    background-color: $color-black;
     position: fixed;
     z-index: 3000;
     text-align: center;
@@ -97,7 +58,7 @@ ul li{
 }
 
 .load {
-    color:var(--color-white);
+    color: $color-white;
     font-size: 4rem;
     position: absolute;
     top: 50%;
@@ -175,9 +136,9 @@ ul li{
     content: attr(data-text);
     position: absolute;
     left: 2px;
-    text-shadow: -1px 0 var(--primary-color);
+    text-shadow: -1px 0 $primary-color;
     top: 0;
-    color: var(--color-white);
+    color:  $color-white;
     overflow: hidden;
     animation: noise-anim 2s infinite linear alternate-reverse;
 }
@@ -252,9 +213,9 @@ ul li{
     content: attr(data-text);
     position: absolute;
     left: -2px;
-    text-shadow: 1px 0 var(--primary-color);
+    text-shadow: 1px 0 $primary-color;
     top: 0;
-    color: var(--primary-color);
+    color: $primary-color;
     overflow: hidden;
     animation: noise-anim-2 15s infinite linear alternate-reverse;
 }
@@ -275,9 +236,9 @@ ul li{
 
 .span-bg{
     position: relative;
-    background: var(--color-white);
+    background:  $color-white;
     padding: 1rem;
-    color: var(--primary-color);
+    color: $primary-color;
 }
 
 /*------------------------------------*/
@@ -286,7 +247,7 @@ ul li{
 /************->ONE PAGE INDEX *********<-*/
 
 #header{
-    background-color: var(--dark-theme-color);
+    background-color: $dark-theme-color;
     min-height: 100vh;
     position: relative;
 
@@ -298,17 +259,17 @@ ul li{
 }
 
 .navbar-brand{
-    color: var(--color-white) !important;
+    color:  $color-white !important;
     font-size: 2rem;
 }
 
 .navbar-toggler{
-    border: 1px solid var(--color-white);
+    border: 1px solid  $color-white;
 }
 
 .fa-arrow-down{
-    color: var(--color-white);
-    transition: var(--default-transition);
+    color:  $color-white;
+    transition: $defalut-transition;
 }
 
 #my-nav{
@@ -325,13 +286,13 @@ ul li{
 }
 
 .nav-link{
-    color: var(--color-white);
-    transition: var(--default-transition);
+    color:  $color-white;
+    transition: $defalut-transition;
 }
 
 .nav-link:hover{
-    color: var(--color-white);
-    text-shadow: 10px -7px 2px var(--primary-color);
+    color:  $color-white;
+    text-shadow: 10px -7px 2px $primary-color;
 }
 
 #mycarousel{
@@ -342,14 +303,6 @@ ul li{
 .carousel-inner, .carousel-item{
     height: 100vh;
     transition: all .3s;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-::-webkit-scrollbar-thumb {
-	display: none;
 }
 
 #pg {
@@ -372,7 +325,7 @@ ul li{
 }
 
 #pg::-webkit-progress-value {
-	background-color: var(--primary-color);
+	background-color: $primary-color;
 	z-index: 10;
 }
 
@@ -388,7 +341,7 @@ ul li{
 }
 
 .progress-bar {
-	background-color: var(--primary-color);
+	background-color: $primary-color;
 	width: 0%;
 	display: block;
 	height: inherit;
@@ -402,7 +355,7 @@ ul li{
 }
 
 .welcome-message{
-    color: var(--color-white);
+    color:  $color-white;
 }
 
 .content-message{
@@ -445,7 +398,6 @@ ul li{
     }
 }
 
-
 #scroll-invitation a span {
     z-index: 2000;
     position: absolute;
@@ -453,8 +405,8 @@ ul li{
     left: 50%;
     width: 2.4rem;
     height: 2.4rem;
-    border-left: 3px solid var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+    border-left: 3px solid $primary-color;
+    border-bottom: 3px solid $primary-color;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg),translate(-50%,-4rem);
     -webkit-animation: yv-effect 1.5s infinite;
@@ -491,7 +443,7 @@ ul li{
 
 #about, #skills, #education, #contacts, #portfolio, #bye{
     padding: 5rem 0;
-    background-color:var(--dark-theme-color) ;
+    background-color:$dark-theme-color ;
 }
 
 .box-content-info{
@@ -502,7 +454,7 @@ ul li{
     font-size: 5rem;
     position: relative;
     cursor: default;
-    color: var(--color-white);
+    color:  $color-white;
     margin-bottom: 10rem;
     z-index: 3;
     display: inline-block;
@@ -515,8 +467,8 @@ ul li{
     width: 50%;
     height: 1.5rem;
     z-index: -2;
-    background: var(--primary-color) !important;
-    transition: var(--default-transition);
+    background: $primary-color !important;
+    transition: $defalut-transition;
 }
 
 .box-content-info > h3:hover::before, #skills h3:hover::before, #education h3:hover::before, #portfolio h3:hover::before, #contacts h3:hover::before{
@@ -534,7 +486,7 @@ ul li{
     align-items: center;
     padding: 1rem;
     margin-bottom: 2rem;
-    color: var(--color-white);
+    color:  $color-white;
 }
 
 .info-text h4, .info-text h3{
@@ -559,39 +511,7 @@ ul li{
 }
 
 .btn-download{
-    z-index: 3;
-    position: relative;
-    padding: 1rem;
-    border: none;
-    margin-top: 2rem;
-    cursor: pointer;
-    background: transparent;
-    color: var(--color-white);
-    transition: var(--default-transition);
-}
-
-.btn-download::after{
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: var(--primary-color);
-    z-index: -1;
-    width: 50%;
-    transition: var(--default-transition);
-}
-
-.btn-download:hover::after{
-    width: 100%;
-    background: transparent;
-    border-top: 1px solid var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
-    border-right: 1px solid var(--primary-color);
-}
-
-.btn-download:hover{
-    color: var(--color-white);
+    @include custom-button;
 }
 
 .skills{
@@ -600,7 +520,7 @@ ul li{
 
 .skills p{
     margin-bottom: 0;
-    color: var(--color-white);
+    color:  $color-white;
 }
 
 .skills p img{
@@ -616,12 +536,12 @@ ul li{
 }
 
 .skills progress[value]::-webkit-progress-bar{
-    background: var(--color-black);
-    border:1px solid var(--color-white) !important;
+    background: $color-black;
+    border:1px solid  $color-white !important;
 }
 
 .skills progress[value]::-webkit-progress-value{
-    background-color: var(--color-white);
+    background-color:  $color-white;
 }
 
 .box-timeline{
@@ -636,11 +556,11 @@ ul li{
 }
 
 .timeline ul {
-    background: var(--dark-theme-color);
+    background: $dark-theme-color;
 }
 
 .timeline ul li {
-    background: var(--color-white);
+    background:  $color-white;
     position: relative;
     margin: 0 auto;
     width: .5rem;
@@ -653,7 +573,7 @@ ul li{
 
 .timeline ul li:before {
     content: "";
-    background: var(--color-white);
+    background:  $color-white;
     position: absolute;
     left: 50%;
     top: 0;
@@ -661,7 +581,7 @@ ul li{
     -webkit-transform: translateX(-50%);
     width: 20px;
     height: 20px;
-    border: 3px solid var(--color-white);
+    border: 3px solid  $color-white;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -672,7 +592,7 @@ opacity: 0;
 }
 
 .timeline ul li .content {
-    background: var(--color-white);
+    background:  $color-white;
     position: relative;
     top: 7px;
     width: 45rem;
@@ -680,29 +600,29 @@ opacity: 0;
 }
 
 .timeline ul li .content h2 {
-    color: var(--color-white);
+    color:  $color-white;
     padding-bottom: 1rem;
-    color: var(--color-black);
+    color: $color-black;
 }
 
 .timeline ul li .content h4{
     font-size: 2rem !important;
-    color: var(--color-white);
+    color:  $color-white;
     margin-bottom: 2rem;
 }
 
 .timeline ul li .content p {
-    color: var(--color-black);
-    transition: var(--default-transition);
+    color: $color-black;
+    transition: $defalut-transition;
 }
 
 .timeline ul li .content a:hover{
-    color: var(--color-white) !important;
+    color:  $color-white !important;
 }
 
 .timeline ul li .content:before {
     content: "";
-    background: var(--color-white);
+    background:  $color-white;
     position: absolute;
     top: 0px;
     width: 3.8rem;
@@ -711,9 +631,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(odd) .content {
     left: 5rem;
-    background: var(--color-white);
-    background: -webkit-linear-gradient(-45deg, var(--primary-color), var(--color-white));
-    background: linear-gradient(-45deg, var(--primary-color), var(--color-white));
+    background:  $color-white;
+    background: -webkit-linear-gradient(-45deg, $primary-color,  $color-white);
+    background: linear-gradient(-45deg, $primary-color,  $color-white);
 }
 
 .timeline ul li:nth-child(odd) .content:before {
@@ -722,9 +642,9 @@ opacity: 0;
 
 .timeline ul li:nth-child(even) .content {
     left: calc(-45rem - 4.5rem);
-    background: var(--color-white);
-    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--color-white));
-    background: linear-gradient(45deg, var(--primary-color), var(--color-white));
+    background:  $color-white;
+    background: -webkit-linear-gradient(45deg, $primary-color,  $color-white);
+    background: linear-gradient(45deg, $primary-color,  $color-white);
 }
 
 .timeline ul li:nth-child(even) .content:before {
@@ -742,17 +662,17 @@ opacity: 0;
 .portfolio-menu button{
     margin-bottom: 1rem;
     margin-right: 1.5rem;
-    border: 1px solid var(--primary-color);
-    background-color: var(--color-white);
+    border: 1px solid $primary-color;
+    background-color:  $color-white;
     color: var(--color-blue);
     padding: .3rem 2rem;
     cursor: pointer;
-    transition: var(--default-transition);
+    transition: $defalut-transition;
 }
 
 .portfolio-menu button.active , .portfolio-menu button:hover{
-    color: var(--color-white);
-    background: var(--primary-color);
+    color:  $color-white;
+    background: $primary-color;
     outline: none;
 }
 
@@ -811,29 +731,29 @@ opacity: 0;
 }
 
 .y-input , .t-input{
-    color: var(--color-white);
+    color:  $color-white;
     display: block;
     background: transparent;
     margin-bottom: 2rem;
     width: 100%;
     margin: 2rem auto;
     border:none;
-    border-bottom: 1px solid var(--white-fade);
+    border-bottom: 1px solid $white-fade;
     padding: .8rem .7rem;
     outline: none;
-    transition: var(--default-transition);
+    transition: $defalut-transition;
 }
 
 .y-input::placeholder, .t-input::placeholder{
-    color: var(--color-white);
+    color:  $color-white;
 }
 
 .y-input:focus{
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px solid $primary-color;
 }
 
 .t-input{
-    border: 1px solid var(--white-fade);
+    border: 1px solid $white-fade;
 }
 
 #bye{
@@ -848,14 +768,14 @@ opacity: 0;
 }
 
 .see-you-soon + h3{
-    color: var(--color-white);
+    color:  $color-white;
     text-align: center;
     font-size: 3rem;
     position: relative;
 }
 
 .t-input:focus{
-    border: 1px solid var(--primary-color);
+    border: 1px solid $primary-color;
 }
 
 .fa-arrow-circle-o-up{
@@ -863,14 +783,14 @@ opacity: 0;
     position: fixed;
     bottom: 4rem;
     right: 2rem;
-    color: var(--primary-color);
+    color: $primary-color;
     cursor: pointer;
-    transition: var(--default-transition);
+    transition: $defalut-transition;
     z-index: 2000;
 }
 
 .fa-arrow-circle-up:hover{
-    color: var(--color-white);
+    color:  $color-white;
 }
 
 #footer{
@@ -878,7 +798,7 @@ opacity: 0;
     bottom: 0;
     width: 100%;
     z-index:-1;
-    background: var(--color-white);
+    background:  $color-white;
     padding: 2rem 0;
     text-align: center;
 }
@@ -890,7 +810,7 @@ opacity: 0;
 }
 
 #footer p{
-    color: var(--primary-color);
+    color: $primary-color;
     margin-top: 2rem;
 }
 /*------------------------------------*/
@@ -941,9 +861,9 @@ opacity: 0;
     }
     .timeline ul li:nth-child(even) .content {
         left: 4.5rem;
-        background: var(--primary-color);
-        background: -webkit-linear-gradient(-45deg, var(--color-white), var(--primary-color));
-        background: linear-gradient(-45deg, var(--color-white), var(--primary-color));
+        background: $primary-color;
+        background: -webkit-linear-gradient(-45deg,  $color-white, $primary-color);
+        background: linear-gradient(-45deg,  $color-white, $primary-color);
     }
     .timeline ul li:nth-child(even) .content:before {
         left: -3.3rem;

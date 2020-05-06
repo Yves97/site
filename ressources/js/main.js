@@ -11,8 +11,8 @@ $(document).ready(function () {
     let typed = new Typed('.type',{
         strings: 
         ['BIENVENU(E) SUR' + ' ' + anotherString],
-        typeSpeed:100,
-        backSpeed:200,
+        typeSpeed:60,
+        backSpeed:50,
         smartBackspace: true,
         loop:true,
         shuffle: true,

@@ -1,0 +1,32 @@
+@mixin custom-button {
+    z-index: 3;
+    position: relative;
+    padding: 1rem;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    background: transparent;
+    color:  $color-white;
+    transition: $defalut-transition;
+    &::after{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: $primary-color;
+        z-index: -1;
+        width: 50%;
+        transition: $defalut-transition;
+    }
+    &:hover::after{
+        width: 100%;
+        background: transparent;
+        border-top: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
+    }
+    &:hover{
+        color: $color-white;
+    }
+}
