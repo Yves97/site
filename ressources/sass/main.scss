@@ -336,7 +336,8 @@ opacity: 0;
     transition: $defalut-transition;
 }
 
-.portfolio-menu button.active , .portfolio-menu button:hover{
+.portfolio-menu button.active, 
+.portfolio-menu button:hover{
     color:  $color-white;
     background: $primary-color;
     outline: none;

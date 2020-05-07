@@ -1107,13 +1107,14 @@ body {
 }
 
 /* line 339, ../sass/main.scss */
-.portfolio-menu button.active, .portfolio-menu button:hover {
+.portfolio-menu button.active,
+.portfolio-menu button:hover {
   color: #fff;
   background: #ff1e56;
   outline: none;
 }
 
-/* line 345, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .bg-img {
   width: 100%;
   height: 35rem;
@@ -1123,61 +1124,61 @@ body {
   cursor: pointer;
 }
 
-/* line 354, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .img-1 {
   background: url("../images/python.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 359, ../sass/main.scss */
+/* line 360, ../sass/main.scss */
 .img-2 {
   background: url("../images/css.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 364, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 .img-3 {
   background: url("../images/sql.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 369, ../sass/main.scss */
+/* line 370, ../sass/main.scss */
 .img-4 {
   background: url("../images/html-5.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 374, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 .img-5 {
   background: url("../images/flutter-logo.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 379, ../sass/main.scss */
+/* line 380, ../sass/main.scss */
 .img-6 {
   background: url("../images/php.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 384, ../sass/main.scss */
+/* line 385, ../sass/main.scss */
 .img-7 {
   background: url("../images/js.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 389, ../sass/main.scss */
+/* line 390, ../sass/main.scss */
 .img-8 {
   background: url("../images/vue-js-1.svg") center no-repeat;
   background-size: contain;
 }
 
-/* line 394, ../sass/main.scss */
+/* line 395, ../sass/main.scss */
 .box-form {
   margin: 0 auto;
   padding: 1rem 10rem;
 }
 
-/* line 399, ../sass/main.scss */
+/* line 400, ../sass/main.scss */
 .y-input, .t-input {
   color: #fff;
   display: block;
@@ -1192,27 +1193,27 @@ body {
   transition: all 0.3s;
 }
 
-/* line 413, ../sass/main.scss */
+/* line 414, ../sass/main.scss */
 .y-input::placeholder, .t-input::placeholder {
   color: #fff;
 }
 
-/* line 415, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 .y-input:focus {
   border-bottom: 1px solid #ff1e56;
 }
 
-/* line 417, ../sass/main.scss */
+/* line 418, ../sass/main.scss */
 .t-input {
   border: 1px solid #e7e7e7;
 }
 
-/* line 419, ../sass/main.scss */
+/* line 420, ../sass/main.scss */
 #bye {
   min-height: 100vh;
 }
 
-/* line 421, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 .see-you-soon {
   height: 50rem;
   background: url("../images/undraw_work_in_progress_uhmv.svg") center no-repeat;
@@ -1220,7 +1221,7 @@ body {
   margin: 2rem auto;
 }
 
-/* line 428, ../sass/main.scss */
+/* line 429, ../sass/main.scss */
 .see-you-soon + h3 {
   color: #fff;
   text-align: center;
@@ -1228,12 +1229,12 @@ body {
   position: relative;
 }
 
-/* line 435, ../sass/main.scss */
+/* line 436, ../sass/main.scss */
 .t-input:focus {
   border: 1px solid #ff1e56;
 }
 
-/* line 439, ../sass/main.scss */
+/* line 440, ../sass/main.scss */
 .fa-arrow-circle-o-up {
   font-size: 4rem;
   position: fixed;
@@ -1245,7 +1246,7 @@ body {
   z-index: 2000;
 }
 
-/* line 450, ../sass/main.scss */
+/* line 451, ../sass/main.scss */
 .fa-arrow-circle-up:hover {
   color: #fff;
 }
